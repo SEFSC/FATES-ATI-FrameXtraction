@@ -1,5 +1,3 @@
-#!/opt/conda/bin/python3.10
-
 import pandas as pd
 import argparse
 import cv2
@@ -30,7 +28,7 @@ def parse_args():
              'in the database file, frames 40-60 will be extracted. '\
              'Default is 0.')
     parser.add_argument(
-        '-v', '--verbose',
+        '-p', '--print',
         action='store_true',
         help='Print successful reads and writes to screen.')
     return parser.parse_args()
@@ -57,7 +55,7 @@ def main():
     """
     # Command line arguments
     args = parse_args()
-    
+
     # Sanity checks
     if 'file' not in args:
         raise NameError(
@@ -67,24 +65,29 @@ def main():
         raise TypeError(
             'Expected type str passed to -f or --file but received '\
             f'{type(args.file).__name__}. See -h for more information.')
+    if 'video' in args and not isinstance(args.video, str):
+        raise TypeError(
+            'Expected type str passed to -v or --video but received '\
+            f'{type(args.video).__name__}. See -h for more information.')
     if 'window' in args and not isinstance(args.window, int):
         raise TypeError(
             'Expected type int passed to -w or --window but received '\
             f'{type(args.window).__name__}. See -h for more information.')
-    if 'verbose' in args and not isinstance(args.verbose, bool):
+    if 'print' in args and not isinstance(args.print, bool):
         raise TypeError(
-            'Expected type bool passed to -v or --verbose but received '\
-            f'{type(args.verbose).__name__}. See -h for more information.')
+            'Expected type bool passed to -p or --print but received '\
+            f'{type(args.print).__name__}. See -h for more information.')
 
     # Read in database file and reshape
-    df = pd.read_csv(args.file, delimiter='\t',
-                     usecols=['FilenameLeft', 'FrameLeft',
-                              'FilenameRight', 'FrameRight'])
+    df = pd.read_csv(os.path.join('/home/app/annotations', args.file),
+                     delimiter='\t', usecols=['FilenameLeft', 'FrameLeft',
+                                              'FilenameRight', 'FrameRight'])
     dfNew = pd.DataFrame({
             'Filename': pd.concat((df['FilenameLeft'], df['FilenameRight'])),
             'Frame': pd.concat((df['FrameLeft'], df['FrameRight']))})
     
     # Current directory
+    os.chdir('/home/app/videos')
     pwd = os.getcwd()
 
     # Loop through videos listed in dataframe
@@ -117,7 +120,7 @@ def main():
                 video.set(cv2.CAP_PROP_FRAME_COUNT, frame)
                 flag, captured = video.read()
                 if flag:
-                    if args.verbose:
+                    if args.print:
                         print(f'Frame {frame} extracted successfully from {file}...')
                 else:
                     raise IndexError(
@@ -136,7 +139,7 @@ def main():
                 if not cv2.imwrite(os.path.join(pwd, 'images', outFile), captured):
                     raise Exception("Could not write image.")
                 else:
-                    if args.verbose:
+                    if args.print:
                         print(f'...file {outFile} successfully created.\n')
 
         video.release()
