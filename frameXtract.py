@@ -28,6 +28,23 @@ def parse_args():
              'in the database file, frames 40-60 will be extracted. '\
              'Default is 0.')
     parser.add_argument(
+        '-s', '--sep',
+        metavar='sep', type=str,
+        default=argparse.SUPPRESS,
+        help='Separator (delimiter) for database file. If omitted, the '\
+             'separator will try to be determined from the file extension or '\
+             'detected automatically by the Python parsing engine, but if '\
+             'these both fail, this flag will be required in order to properly '\
+             'read the file.')
+    parser.add_argument(
+        '-v', '--video',
+        metavar='video', type=str,
+        help='Full path to directory containing the videos to be processed. '\
+             'This is only used if a full directory path is passed to "-f" '\
+             'or "--file", which indicates that the program is being run '\
+             'stand-alone instead of within its container. Otherwise, it '\
+             'will be ignored.')
+    parser.add_argument(
         '-p', '--print',
         action='store_true',
         help='Print successful reads and writes to screen.')
@@ -69,6 +86,10 @@ def main():
         raise TypeError(
             'Expected type str passed to -v or --video but received '\
             f'{type(args.video).__name__}. See -h for more information.')
+    if 'sep' in args and not isinstance(args.sep, str):
+        raise TypeError(
+            'Expected type str passed to -s or --sep but received '\
+            f'{type(args.sep).__name__}. See -h for more information.')
     if 'window' in args and not isinstance(args.window, int):
         raise TypeError(
             'Expected type int passed to -w or --window but received '\
@@ -78,16 +99,49 @@ def main():
             'Expected type bool passed to -p or --print but received '\
             f'{type(args.print).__name__}. See -h for more information.')
 
-    # Read in database file and reshape
-    df = pd.read_csv(os.path.join('/home/app/annotations', args.file),
-                     delimiter='\t', usecols=['FilenameLeft', 'FrameLeft',
-                                              'FilenameRight', 'FrameRight'])
+    # Read in database file and reshape. Tries to determine the delimiter
+    # from the file extension if not passed as a command line argument.
+    # If this fails, user is prompted to specify and try again.
+    if len(os.path.dirname(args.file)) > 0:
+        dbFile = args.file
+        container = False
+        if 'video' not in args:
+            raise ValueError(
+                'Passing a full directory chain to "-f" or "--file" '\
+                'indicates this program is being run stand-alone instead '\
+                'of within its container. This requires that the video '\
+                'directory be passed to "-v" or "--video", but none was '\
+                'detected. See -h for more information.')
+            
+    else:
+        dbFile = os.path.join('/home/app/annotations', args.file)
+        container = True
+    if 'sep' not in args:
+        if args.file[-3:] == "tsv":
+            args.sep = '\t'
+        elif args.file[-3:] == 'csv':
+            args.sep = ','
+        else:
+            args.sep = None
+    try:
+        df = pd.read_csv(dbFile, delimiter=args.sep,
+                         usecols=['FilenameLeft', 'FrameLeft',
+                                  'FilenameRight', 'FrameRight'])
+    except ValueError:
+        raise ValueError(
+            f'Unable to parse the file "{args.file}" using separator '\
+            f'"{args.sep}". Relaunch with the proper separator passed '\
+            'to -s or --sep flag (e.g., " " for one space, ";" for '\
+            'semicolon, etc., without quotations.')
     dfNew = pd.DataFrame({
             'Filename': pd.concat((df['FilenameLeft'], df['FilenameRight'])),
             'Frame': pd.concat((df['FrameLeft'], df['FrameRight']))})
     
-    # Current directory
-    os.chdir('/home/app/videos')
+    # Change current directory to video directory
+    if container:
+        os.chdir('/home/app/videos')
+    else:
+        os.chdir(os.path.dirname(args.video))
     pwd = os.getcwd()
 
     # Loop through videos listed in dataframe
