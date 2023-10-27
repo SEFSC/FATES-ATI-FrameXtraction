@@ -103,16 +103,16 @@ The preferred method of usage is to run the script within its [Docker container]
     4. This section of ```docker-compose.yml``` maps local directories to independent directories inside the container. The container will only be able to see the contents of local directories mounted here. If you run into "file not found" errors, look here first.
   
  3. Open a Command Prompt (Windows) or Terminal (Mac) and navigate to the directory containing the container files.
- 5. Launch Docker Desktop, which must be running in order for the next commands to work.
+ 5. Launch Docker or Docker Desktop, which must be running in order for the next commands to work.
  5. Build the Docker container:
     ```shell
     docker-compose build
     ```
  6. To execute, run
     ```shell
-    docker-compose run framextract -f databaseFilename.ext
+    docker-compose run framextract -f dataFilename.ext
     ```
-    where ```databaseFilename.ext``` is the name of the annotations database file. (Do not pass the full directory chain; just the file name.) Additional options are described below.
+    where ```dataFilename.ext``` is the name of the annotations database file. (Do not pass the full directory chain; just the file name.) Additional options are described below.
 
 ### Method 2: As a stand-alone Python script
 1. [Clone this GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). Alternatively, download the script file ```frameXtract.py``` and the package dpendency file ```requirements.txt``` from the repository.
@@ -120,7 +120,7 @@ The preferred method of usage is to run the script within its [Docker container]
 3. **Highly recommended:** Create a virtual environment and install the package dependencies in ```requirements.txt```.
 4. Execute by passing a *full directory path* for the data spreadsheet file using ```-f``` or ```--file``` **and** a full directory path for the videos to ```-v``` or ```--video``` **and** (optionally) a full directory path for new images to ```-i``` or ```--image```. This will tell the script that it is being run stand-alone instead of within a container:
    ```shell
-   python framextract.py --file full/path/to/databaseFilename.ext --video full/path/to/videoFiles --image full/path/for/imageFiles
+   python framextract.py --file full/path/to/dataFilename.ext --video full/path/to/videoFiles --image full/path/for/imageFiles
    ```
    Note that this method may be finicky due to potential version conflicts if the virtual environment does not get set up properly.
 
@@ -131,7 +131,7 @@ This program contains a number of options to customize usage, a summary of which
 docker-compose run framextract -h
 ```
 
-### ```-f```, ```--file```: data spredsheet file name
+### -f, --file: data spreadsheet file name
 This is the only required argument when using Method 1 above (preferred). It specifies the data shreadsheet file to consult for extracting frames. It must contain the following columns of information:
 - *FilenameLeft* - name of video files corresponding to left stereo channel
 - *FilenameRight* - name of video files corresponding to right stereo channel
@@ -144,43 +144,43 @@ This is the only required argument when using Method 1 above (preferred). It spe
 
 Example:
 ```shell
-docker-compose run framextract -f databaseFilename.ext
+docker-compose run framextract -f dataFilename.ext
 ```
 
-### ```-s```, ```--sep```: separator
+### -s, --sep: separator
 This specifies the separator (delimiter) for the data spreadsheet file. If no separator is provided at execution, the script tries to determine the separator from the file extention (e.g., "tsv"==tab-delimited, "csv"==comma-separated) or let the Python parsing engine try to automatically determine it. If these attempts fail, the program will exit and the user will be prompted to re-launch using this flag. This flag is generally not needed in most cases if the file is tab or comma separated, as the automatic determination should rarely fail in either of these cases.
 
 Example:
 ```shell
-docker-compose run framextract --file databaseFilename.ext --sep \t 
+docker-compose run framextract --file dataFilename.ext --sep \t 
 ```
 
-### ```-w```, ```--window```: window for frame extraction
+### -w, --window: window for frame extraction
 For some applications, it may be appropriate to extract a range of frames rather than a single frame. This flag allows the user to specify a number of frames before and after the frame number reported in the spreadsheet to extract. For example, if this is set to 5 and the data contains an annotation at frame 45, then frames 40-50 will be extracted and saved separately (45 $\pm$ 5). For a video recorded at 10 frames per second, this corresponds to one second worth of frames.
 
 Example:
 ```shell
-docker-compose run framextract --file databaseFilename.ext --window 5
+docker-compose run framextract --file dataFilename.ext --window 5
 ```
 
-### ```-v```, ```--video```: video directory
+### -v, --video: video directory
 This provides the user the ability to specify where the videos are located. **It is only used if, and required when, the program is run stand-alone outside of its Docker container, which is not recommended.** This is never needed if the program is run from its Docker container -- in fact, it will be ignored in this case, since the video location would be provided in the ```docker-compose.yml``` file, as decribed above.
 
-### ```-i```, ```--image```: image directory
+### -i, --image: image directory
 This provides the user the ability to specify where the images should be saved. **It is only used if the program is run stand-alone outside of its Docker container, which is not recommended.** This is never needed if the program is run from its Docker container -- in fact, it will be ignored in this case, since the image location would be provided in the ```docker-compose.yml``` file, as decribed above.
 
-### ```-p```, ```--print```: print status dialogues to screen
+### -p, --print: print status dialogues to screen
 This takes no arguments; passing it will print updates of successful file reading and writing to the screen.
 
 Example:
 ```shell
-docker-compose run framextract --file databaseFilename.ext --window 5 -p
+docker-compose run framextract --file dataFilename.ext --window 5 -p
 ```
 
-### ```-h```, ```--help```: help string
+### -h, --help: help string
 Displays the help documentation.
 
 *This program remains under active development. This page will be updated as the script evolves.*
 
 # Disclaimer
-This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
+This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
