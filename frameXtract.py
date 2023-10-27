@@ -223,7 +223,7 @@ def main():
                 'default.')
     else:
         container = True
-        dbFile = os.path.join('/annotations', args.file)
+        dbFile = os.path.join('/data', args.file)
     
     # Store video and image directories if running in container
     if container:
