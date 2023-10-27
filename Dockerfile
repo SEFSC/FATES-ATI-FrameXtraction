@@ -2,8 +2,8 @@
 FROM python:3.11
 # FROM jupyter/base-notebook:python-3.10.4
 
-# Copy requirements inot image directory "project"
-WORKDIR /home/app
+# Copy requirements into container
+WORKDIR /home
 COPY requirements.txt .
 
 # Update pip and install Python package dependencies

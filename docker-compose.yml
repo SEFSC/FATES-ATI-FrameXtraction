@@ -14,8 +14,9 @@ services:
     # ports:
     #   - 8888:8888
     volumes:
-      - .:/home/app
-      - .:/home/app/videos
-      - .:/home/app/annotations
+      - .:/home
+      - .:/videos
+      - .:/images
+      - .:/annotations
     entrypoint: python3 frameXtract.py
     command: python3 frameXtract.py -h
