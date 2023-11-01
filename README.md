@@ -117,7 +117,7 @@ The preferred method of usage is to run the script within its [Docker container]
 ### Method 2: As a stand-alone Python script
 1. [Clone this GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). Alternatively, download the script file ```frameXtract.py``` and the package dpendency file ```requirements.txt``` from the repository.
 2. Download and install [Python](https://www.python.org/downloads/) if needed. This program was written in Python 3.11.
-3. **Highly recommended:** Create a virtual environment and install the package dependencies in ```requirements.txt```.
+3. **Highly recommended:** [Create a virtual environment](https://docs.python.org/3/library/venv.html) and install the package dependencies in ```requirements.txt```.
 4. Execute by passing a *full directory path* for the data spreadsheet file using ```-f``` or ```--file``` **and** a full directory path for the videos to ```-v``` or ```--video``` **and** (optionally) a full directory path for new images to ```-i``` or ```--image```. This will tell the script that it is being run stand-alone instead of within a container:
    ```shell
    python framextract.py --file full/path/to/dataFilename.ext --video full/path/to/videoFiles --image full/path/for/imageFiles
