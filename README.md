@@ -1,5 +1,5 @@
 # imageXtraction
- Simple tool for extracting frames from stereo videos and saving as images
+ Simple tool for extracting frames from stereo videos and saving as images as described in [frameExtractionFromVideo.ipynb](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/main/frameExtractionFromVideo.ipynb).
 
 <details>
   <summary>
@@ -181,6 +181,10 @@ docker-compose run framextract --file dataFilename.ext --window 5 -p
 Displays the help documentation.
 
 *This program remains under active development. This page will be updated as the script evolves.*
+
+## Workflow
+
+ A demonstration and explanation of the script workflow is provided in an accompanying [Jupyter notebook](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/main/frameExtractionFromVideo.ipynb).
 
 # Disclaimer
 This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
