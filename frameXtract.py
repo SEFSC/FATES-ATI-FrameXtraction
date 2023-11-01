@@ -258,11 +258,6 @@ def main():
     df['Genus'].fillna('gen', inplace=True)
     df['Species'].fillna('sp', inplace=True)
 
-    # Ensure all annotation strings are uppercase for convenience
-    df['Family'] = df['Family'].str.upper()
-    df['Genus'] = df['Genus'].str.upper()
-    df['Species'] = df['Species'].str.upper()
-
     # Extract frames from each channel
     channels = ['left', 'right']
     for channel in channels:
