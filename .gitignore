@@ -77,7 +77,6 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-frameExtractionFromVideo.ipynb
 
 # IPython
 profile_default/
