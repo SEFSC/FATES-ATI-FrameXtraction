@@ -1,0 +1,85 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+#topnav:
+#- title: Topnav
+#  items:
+#     - title: IOOS Data Standards
+#       external_url: https://ioos.noaa.gov/data/data-standards/
+
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+     - title: IOOS Resources
+       folderitems:
+        - title: IOOS Homepage
+          external_url: https://ioos.noaa.gov/
+        - title: IOOS.us National Data Portal
+          external_url: https://ioos.us/
+        - title: Data Standards & Requirements for IOOS Grantees
+          external_url: https://ioos.noaa.gov/data/data-standards/
+
+  
+     - title: Data Standards & Formats
+       folderitems:
+        - title: IOOS DMAC Documentation Portal Home
+          url: https://ioos.github.io/
+        - title: IOOS Metadata Profile
+          url: https://ioos.github.io/ioos-metadata/
+        - title: IOOS Glider Specification
+          url: https://ioos.github.io/glider-dac/
+        - title: IOOS ATN Specification
+          url: https://ioos.github.io/ioos-atn-data/
+        - title: MBON Data Specification
+          url: https://ioos.github.io/mbon-docs/
+        - title: NCEI Data Archiving Guidelines for IOOS
+          url: https://ioos.github.io/ncei-archiving-cookbook/
+        - title: IOOS Convention for Asset Identification
+          url: https://ioos.github.io/conventions-for-observing-asset-identifiers/
+        - title: Darwin Core Marine Compendium
+          external_url: https://ioos.github.io/bio_data_guide/
+
+     - title: Software & Documentation
+       folderitems:
+        - title: <b>IOOS Open Source Software</b>
+        - title: IOOS GitHub Organization
+          external_url: https://github.com/ioos
+        - -----------------------------------------
+        - -----------------------------------------
+        - title: <b>Software Documentation</b>
+        - title: ERDDAP Docker Quick Start
+          url: https://ioos.github.io/erddap-gold-standard/
+        - title: erddapy
+          external_url: https://ioos.github.io/erddapy/
+        - title: ioos_qc
+          external_url: https://ioos.github.io/ioos_qc/
+        - title: Cloud Sandbox
+          external_url: https://www-sandbox.ioos.us/
+        - title: Compliance Checker
+          external_url: https://ioos.github.io/compliance-checker/
+        - title: gliderpy
+          external_url: https://ioos.github.io/gliderpy/
+        
+     - title: Data Use & Community
+       folderitems: 
+        - title: <b>IOOS Data Use & Resources</b>
+        - title: IOOS CodeLab
+          external_url: https://ioos.github.io/ioos_code_lab/
+        - title: Compliance Checker Web 
+          external_url: https://compliance.ioos.us/
+        - -----------------------------------------
+        - -----------------------------------------
+        - title: <b>Community Resources/Events</b>
+        - title: IOOS Code Sprint
+          external_url: https://ioos.github.io/ioos-code-sprint/
+        - title: Marine Bio Data Workshop
+          external_url: https://ioos.github.io/bio_mobilization_workshop/
+        - -----------------------------------------
+        - -----------------------------------------
+        - title: <b>Community Events Archive</b>
+        - title: 2018 IOOS Bio Data Workshop
+          url: https://ioos.github.io/BioData-Training-Workshop/
+        - title: 2019 IOOS Code Sprint
+          external_url: https://glos.org/2019-code-sprint/
+          

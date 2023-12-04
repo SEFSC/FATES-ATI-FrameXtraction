@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Getting started with IOOS Jekyll Documentation Theme Skeleton | ioos-documentation-jekyll-skeleton</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Getting started with IOOS Jekyll Documentation Theme Skeleton" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background" />
+<meta property="og:description" content="Background" />
+<link rel="canonical" href="http://localhost:4000/ioos-documentation-jekyll-skeleton/howto.html" />
+<meta property="og:url" content="http://localhost:4000/ioos-documentation-jekyll-skeleton/howto.html" />
+<meta property="og:site_name" content="ioos-documentation-jekyll-skeleton" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-04T12:13:16-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Getting started with IOOS Jekyll Documentation Theme Skeleton" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-04T12:13:16-05:00","datePublished":"2023-12-04T12:13:16-05:00","description":"Background","headline":"Getting started with IOOS Jekyll Documentation Theme Skeleton","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ioos-documentation-jekyll-skeleton/howto.html"},"url":"http://localhost:4000/ioos-documentation-jekyll-skeleton/howto.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/ioos-documentation-jekyll-skeleton/assets/css/style.css?v=7440ded8f1a5f9ef371e4c93ba110aa86df7662f">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/ioos-documentation-jekyll-skeleton/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/ioos-documentation-jekyll-skeleton/">ioos-documentation-jekyll-skeleton</a></h1>
+      
+
+      <h2 id="background">Background</h2>
+
+<p>The <a href="https://github.com/ioos/ioos-documentation-jekyll-skeleton">ioos-documentation-jekll-skeleton</a> repository is a template, or ‘skeleton’ starting point to create a new GitHub-based documentation site that uses the IOOS <a href="https://github.com/ioos/documentation-theme-jekyll">documentation-theme-jekyll</a>.</p>
+
+<p>The instructions below will allow you to create a new GitHub Pages site that follows the look and feel/functionality of the Jekyll documentation theme used by the <a href="https://ioos.github.io">https://ioos.github.io</a> site.  You can then add/edit the template markdown documents with your own content.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="step-1-use-the-ioos-documentation-jekyll-skeleton-template-to-create-your-own-forked-repository">Step 1: Use the ioos-documentation-jekyll-skeleton template to create your own forked repository</h3>
+
+<p>This is done on the GitHub website.  These steps assume you already have a GitHub account in place.</p>
+
+<ol>
+  <li>
+    <p>Browse to the <a href="https://github.com/ioos/ioos-documentation-jekyll-skeleton">ioos-documentation-jekyll-skeleton</a> repository, and select the ‘Use this template’ button and select ‘Create your own repository’: <img src="https://ioos.github.io/use-template.png" alt="GitHub use template image" style="display:block; border: 1px solid" /></p>
+  </li>
+  <li>
+    <p>Name the repository, select the owner (your own account or a GitHub organization you have write permissions to) give it a description if desired, and select other options as appropriate.  At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. <img src="https://ioos.github.io/new-repo.png" alt="GitHub new repo image" style="width: 600px; display:block; border: 1px solid" /></p>
+  </li>
+  <li>
+    <p>From your new repoistory page, download or ‘clone’ the repository to edit it locally using Jekyll/Ruby.  The local editing process assumes you have a git client installed in order to push your edited files back to GitHub, and that you’re able to install the dependencies to run Jekyll (Ruby programming language).  For those who do not have git, or cannot run Ruby, editing can be accomplished on the GitHub website one file at a time (see <a href="#step-2-edit-your-documentation-site-content">Step 2: Edit your documentation site content</a> below for details).  <img src="https://ioos.github.io/clone.png" alt="GitHub clone example image" style="width: 350px; display:block; border: 1px solid" /></p>
+  </li>
+</ol>
+
+<h3 id="step-2-setting-up-your-site-for-editing">Step 2: Setting up your site for editing</h3>
+
+<p>Editing content in your new fork of the documentation skeleton repository can be done in one of two ways:</p>
+<ol>
+  <li>Locally using a text editor, and optionally running in local development mode via a Ruby/Jekyll installation</li>
+  <li>Online using the GitHub website</li>
+</ol>
+
+<p>Editing locally with Ruby/Jekyll is easier for making major changes to the site, including more complex changes to theme content such as configuring the sidebar navigation, working with images in the <code class="language-plaintext highlighter-rouge">/_docs/images/</code> folder, etc.  It requires a basic text editor for editing theme content, a local installation of Ruby/Jekyll to preview your changes, and git client to push your changes back to GitHub.  See the <a href="#editing-locally-with-rubyjekyll">Editing locally with Ruby/Jekyll</a> section for details.</p>
+
+<p>Editing in GitHub is easier for more minor content modifications such as editing text in individual markdowns file, one at a time.  See the <a href="#editing-online-in-github">Editing online in GitHub</a> section for details.</p>
+
+<h4 id="editing-locally-with-rubyjekyll">Editing locally with Ruby/Jekyll</h4>
+<p>This approach allows instantaneous rendering of the site exactly as it will appear in GitHub Pages so you can more rapidly iterate changes.  Once you are happy with your changes, you can then commit them to your git branch locally, and push them with git to GitHub to update the online GitHub Pages site (or follow the GitHub PR workflow if you prefer).  Using git is outside the scope of this HOWTO, but lots of documentation and tutorial are available onine to learn git.</p>
+
+<p><strong>Setting up the Ruby/Jekyll environment:</strong></p>
+
+<p>Instructions are avaialable in the Jekyll Documentation Theme <a href="https://idratherbewriting.com/documentation-theme-jekyll/index.html">Getting Started documentation</a> - this is the upstream Jekyll theme that the IOOS documentation theme is based on.</p>
+
+<p>Follow these steps first to get your Jekyll environment running, in particular, use the <a href="https://idratherbewriting.com/documentation-theme-jekyll/index.html#option2">Option 2: Build theme with github-pages gem</a> approach to run the site, or read on to the section below.</p>
+
+<p><strong>Running the site in Jekyll:</strong></p>
+
+<p>Some modifications to the theme have been made for IOOS’ purposes. Therefore, instead of using the exact <code class="language-plaintext highlighter-rouge">bundle</code> commands included in the Jekyll Documentation Theme instructions to run the site, use the following instead:</p>
+
+<p>Run Jekyll via Bundler in incremental build, verbose logging mode (using the <code class="language-plaintext highlighter-rouge">_config_dev.yml</code> for local development settings):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose --incremental
+</code></pre></div></div>
+
+<p>If changing headers and menus, stop the running server by entering <code class="language-plaintext highlighter-rouge">ctrl-c</code> in the terminal. Then, clean up the locally-built site (in the <code class="language-plaintext highlighter-rouge">_site</code> directory) and re-run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll clean
+bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose --incremental
+</code></pre></div></div>
+
+<p>By default, the <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> command will serve the site on your machine at:</p>
+
+<p><a href="http://localhost:4000/ioos-documentation-jekyll-skeleton/">http://localhost:4000/ioos-documentation-jekyll-skeleton/</a></p>
+
+<p>Once you have the site running, you will want to modify the settings found in the <code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_config_dev.yml</code> files to change the site URL from ‘ioos-documentation-jekyll-skeleton’ to a URL of your choosing, and make other modifications as appropriate.</p>
+
+<p>See the <a href="#editing-and-configuring-your-documentation-site">Editing and configuring your documtenation site</a> section for futher explanation of these and other important theme files to familiarize yourself with and modify as appropriate.</p>
+
+<h4 id="editing-online-in-github">Editing online in GitHub</h4>
+<p>When you are setting up a new documentation site initially, you will likely want to use the Ruby/Jekyll approach described above to get your site configured.  Once this has been accomplished and your site is running in GitHub Pages, you can make minor edits to your site  directly on GitHub with your browser in three simple steps:</p>
+<ol>
+  <li>Go to the page you want to edit, and click on the “Edit me” button just below the page Title and Summary;</li>
+  <li>Open it for editing by clicking on the “pencil” icon at the right side above the file content;</li>
+  <li>Make all changes, preview them to make sure that everything is OK, and commit them to the ‘gh-pages’ (make sure that the “Commit directly to the gh-pages branch” option is checked).</li>
+</ol>
+
+<p>A visual walkthrough of this process is also available in the <a href="https://docs.google.com/presentation/d/1OBZumh-vK3tynt90_2GH_Xdp1LVuI-wao70FVzGp3Vg/edit#slide=id.p">Editing Markdown Files for GitHub Pages</a> Google Slides presentation.</p>
+
+<h2 id="editing-and-configuring-your-documentation-site">Editing and configuring your documentation site</h2>
+
+<p>The table below lists important theme configuration files (which will require editing and customization for newly-created sites), and lists important directories in which to place content for your site.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Name</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_config.yml</code></td>
+      <td>Main Jekyll configuration files.  Modify settings in these to change anything related to the theme.  The important settings to update are primarily located at the top of the file, and include settings like: ‘title’, ‘name’, ‘description’, ‘baseurl’, among others.  More documentation can be found in the ‘Documentation Theme for Jekyll’ original documentation (see below).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_config_dev.yml</code></td>
+      <td>Settings for running the site locally via Ruby/Jekyll in development mode.  You should only need to modify the <code class="language-plaintext highlighter-rouge">baseurl</code> setting for your documentation site to align with that of <code class="language-plaintext highlighter-rouge">_config.yml</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/_data/sidebars/sidebar_ioos.yml</code></td>
+      <td>Configuration file for a side accordion navigation menu.  Further description of the configuration details and how they work is beyond the scope here, refer to the Jekyll and the ‘Documentation Theme for Jekyll’ original documentation for more info.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/_docs/</code></td>
+      <td>Directory to place any GitHub-standard markdown (.md) content to publish.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/_docs/index.md</code></td>
+      <td>The markdown file that contains the content for the ‘homepage’ (index.html) for the site - this should be updated/replaced accordingly.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/_docs/images/</code></td>
+      <td>A folder to add any image content to reference in your documentation pages.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="configuring-the-side-navigation-bar">Configuring the side navigation bar</h3>
+
+<p>The sidebar navigation adapts to the documentation. Although the theme allows to use several sidebars (see <code class="language-plaintext highlighter-rouge">_config.yml</code> file), a single sidebar ‘ioos_sidebar’ is used by default for IOOS’ implementation. The sidebar name must be specified either in the <code class="language-plaintext highlighter-rouge">_config.yml</code> in the ‘defaults’ section (as it is in this skeleton repo), or it may be configured on a page-by-page basis in the page’s frontmatter. Here’s an example of the page frontmatter showing the sidebar property:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: Alerts
+tags: [formatting]
+keywords: notes, tips, cautions, warnings, admonitions
+last_updated: July 3, 2016
+summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.html include."
+sidebar: ioos_sidebar
+permalink: mydoc_alerts
+---
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">sidebar: ioos_sidebar</code> refers to the <code class="language-plaintext highlighter-rouge">_data/sidebars/ioos_sidebar.yml</code> file. The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme, specically looking at <code class="language-plaintext highlighter-rouge">ioos_sidebar.yml</code> as an example.</p>
+
+<p>For more details on the sidebar syntax, see <a href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_sidebar_navigation.html">Sidebar navigation</a>.</p>
+
+<h3 id="editing-markdown-documents">Editing markdown documents</h3>
+
+<p>This theme uses a Kramdown variety of the Markdown - a lightweight markup language with plain text formatting syntax. The Kramdown is a superset of Markdown that supports standard Markdown and various extensions. The GitHub Pages naturally support rendering documents in Kramdown through the GitHub Jekyll implementation. The detailed description of the Kramdown syntax can be found by following the links in the Reference section below.</p>
+
+<p>Every document must start with the so-called frontmatter properties:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "Some title"
+tags: [sample1, sample2]
+keywords: keyword1, keyword2, keyword3
+last_updated: Month day, year
+summary: "optional summary here"
+sidebar: sidebarname
+topnav: topnavname
+toc: false
+#search: exclude
+#permalink: filename.html
+---
+</code></pre></div></div>
+
+<p>For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash <code class="language-plaintext highlighter-rouge">\</code>.</p>
+
+<p>Values for <code class="language-plaintext highlighter-rouge">keywords</code> get populated into the metadata of the page for SEO.</p>
+
+<p>Values for <code class="language-plaintext highlighter-rouge">tags</code> must be defined in your <code class="language-plaintext highlighter-rouge">_data/tags.yml</code> list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won’t auto-create these tag files.)</p>
+
+<p>In the current version of the theme, the <code class="language-plaintext highlighter-rouge">permalink</code> property value interferes with other collection settings; therefore it should be commented in the frontmatter. However, it should not be removed as it may be needed in future versions.</p>
+
+<p>Value for <code class="language-plaintext highlighter-rouge">search</code> controls inclusion of the document content into theme search mechanism. If you want to be able to perform basic search through your site documents, make sure that this property is commented in the frontmatter.</p>
+
+<p>Follow the sample pattern shown in the theme, specifically looking at Markdown sample documents in the <code class="language-plaintext highlighter-rouge">_docs</code> folder as an example.</p>
+
+<h3 id="a-note-on-submodules">A note on submodules</h3>
+
+<p>This theme uses two GitHub ‘submodules’.  Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all of IOOS’ GitHub Documentation sites <a href="https://ioos.github.io">https://ioos.github.io</a>.</p>
+
+<p>For example, the menu bar at the top of the page is configured with a single YAML file in a submodule, and the tyeme code itself, including site functionality and look and feel is kept within a submodule.</p>
+
+<p>The git submodules for this skeleton repository are sourced from the <a href="https://github.com/ioos/documentation-theme-jekyll">ioos/documentation-theme-jekyll</a> repository and located in the following submodule paths (as configured in the <code class="language-plaintext highlighter-rouge">.gitmodules</code> file in the repository root):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Submodule Path</strong></th>
+      <th><strong>Branch Name</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/_data/navbars/</code></td>
+      <td>navbars</td>
+      <td>the YAML configuration file for the IOOS top navigation bar (<code class="language-plaintext highlighter-rouge">topnav_ioos.yml</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/theme/</code></td>
+      <td>main</td>
+      <td>the Jekyll theme files containing the look and feel and functionality of the site</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="updating-submodules-in-a-local-development-clone">Updating submodules in a local development clone</h4>
+
+<p>If you’re doing local development with git and Jekyll and your local working copy is out of date (some number of commits behind the GitHub-hosted source repository), the workflow to follow to update your local working copy is slightly more complicated due to the presence of the submodules.</p>
+
+<p>First, follow a typical git process to pull in the remote changes from GitHub.  Assuming <code class="language-plaintext highlighter-rouge">origin</code> is the git remote repo alias and <code class="language-plaintext highlighter-rouge">gh-pages</code> is the working branch, run either of the following commands to update your working copy:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+<p>or</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin
+git merge origin/gh-pages
+</code></pre></div></div>
+
+<p>At this point, running a <code class="language-plaintext highlighter-rouge">git status</code> command may indicate that your working copy contains commits on the submodules that differ from the remote repo you’re working with, This looks something like the following:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   _data/navbars (new commits)
+        modified:   theme (new commits)
+</code></pre></div></div>
+
+<p>This means you must also update the submodules to match the commit recorded in the latest commit of the superproject (i.e. the documentation repo itself).</p>
+
+<p>Pull in any upstream changes to submodules by running either of the following (<code class="language-plaintext highlighter-rouge">--init</code> may be needed in some circumstances):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git submodule update --init
+git submodule update
+</code></pre></div></div>
+
+<p>You can confirm the submodules are configured correctly to track the upstream repository branches (and not tagged to a specific commit) by running:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git submodule status
+</code></pre></div></div>
+
+<p>Which should output something like the following (showing the hash of the commit currently checked out, the submodule name, and the remote branch tracked):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>edb2048843b71191909d53428b969f53bfbe4757 _data/navbars (remotes/origin/navbars)
+d958aec9981aacace8c08dc6b2da147afdab9af6 theme (remotes/origin/main)
+</code></pre></div></div>
+
+<p>Additionally, running <code class="language-plaintext highlighter-rouge">git status</code> again should resolve the modified status of both submodule paths (meaning your working copy is now fully in-sync with the latest remote commit on GitHub) and you can now commit new changes without affecting the submodule commit history:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+nothing to commit, working directory clean
+</code></pre></div></div>
+<p>Working with submodules can be tricky, however the steps above should work in most cases.  For full documentation on the <code class="language-plaintext highlighter-rouge">git submodule</code> command, see: <a href="https://git-scm.com/docs/git-submodule">https://git-scm.com/docs/git-submodule</a>.</p>
+
+<p>There shouldn’t be any need to modify code in either of the submodules manually, they are meant to be identical across all of the individual IOOS GitHub Documentation sites, they need only be properly updated in local working copies before submitting any changes back to GitHub.  Both submodules are also automatically syncrhonized in GitHub with changes in the source <a href="https://github.com/ioos/documentation-theme-jekyll">ioos/documentation-theme-jekyll</a> repository via GitHub Actions as configured in the <code class="language-plaintext highlighter-rouge">.github/workflows/sync_theme.yml</code> file.  For the ioos/ioos-documentation-jekyll-skeleton repository, that file can be found <a href="https://github.com/ioos/ioos-documentation-jekyll-skeleton/blob/gh-pages/.github/workflows/sync_theme.yml">here</a>.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="http://idratherbewriting.com/documentation-theme-jekyll/index.html">Original Documentation for the Documentation Theme for Jekyll</a>
+    <ul>
+      <li><a href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_about_ruby_gems_etc.html">Ruby &amp; Jekyll Installation and Setup Section</a></li>
+    </ul>
+  </li>
+  <li><a href="https://jekyllrb.com/docs/">A Comprehensive Guide for Jekyll</a></li>
+  <li><a href="https://www.ruby-lang.org/en/">Ruby documentation &amp; downloads</a>
+    <ul>
+      <li><a href="http://rubyinstaller.org/downloads/">Ruby Installer for Windows</a></li>
+      <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-and-set-up-a-local-programming-environment-on-windows-10">A Guide on Ruby Installation and Setup for Windows 10</a></li>
+    </ul>
+  </li>
+  <li><a href="https://help.github.com/articles/about-github-pages-and-jekyll/">General information on the way GitHub uses Jekyll in ‘GitHub Pages’ sites</a>
+    <ul>
+      <li><a href="https://help.github.com/articles/user-organization-and-project-pages/">In particular, how to use a specially-named branch ‘gh-pages’ to push documentation for a ‘Project’ page (which most repos will fall under)</a></li>
+    </ul>
+  </li>
+  <li>GitHub Kramdown:
+    <ul>
+      <li><a href="https://kramdown.gettalong.org/syntax.html">Kramdown Syntax</a></li>
+      <li><a href="https://kramdown.gettalong.org/quickref.html">Kramdown Quick Reference</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+
+<h3 id="the-theme-isnt-rendering-properly-when-deployed-to-the-web">The theme isn’t rendering properly when deployed to the web.</h3>
+<p>If it looks something like:
+<img src="https://user-images.githubusercontent.com/8480023/260767152-435696ce-fd9e-4b76-86e5-dc84be85e577.png" alt="screenshot" /></p>
+<ul>
+  <li>Check that <code class="language-plaintext highlighter-rouge">_config.yml</code> and <code class="language-plaintext highlighter-rouge">_config_dev.yml</code> are pointing to the right repository (see this PR as an example https://github.com/ioos/glider-dac/pull/216/files).</li>
+</ul>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
