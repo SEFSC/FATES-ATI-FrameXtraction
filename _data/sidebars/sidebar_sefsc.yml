@@ -51,7 +51,7 @@ entries:
 
 
 #Always visible folder name that contains top-level menu items with links to 2nd document/page
-  - title: "HOWTO - IOOS Jekyll Theme"
+  - title: "HOWTO - SEFSC FATES Jekyll Theme"
     output: web, pdf
 
     folderitems:

@@ -3,23 +3,20 @@
 #topnav:
 #- title: Topnav
 #  items:
-#     - title: IOOS Data Standards
-#       external_url: https://ioos.noaa.gov/data/data-standards/
+#     - title: About SEFSC
+#       external_url: https://www.fisheries.noaa.gov/about/southeast-fisheries-science-center
 
 
 #Topnav dropdowns
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-     - title: IOOS Resources
+     - title: SEFSC Resources
        folderitems:
-        - title: IOOS Homepage
-          external_url: https://ioos.noaa.gov/
-        - title: IOOS.us National Data Portal
-          external_url: https://ioos.us/
-        - title: Data Standards & Requirements for IOOS Grantees
-          external_url: https://ioos.noaa.gov/data/data-standards/
-
+        - title: SEFSC Homepage
+          external_url: https://www.fisheries.noaa.gov/about/southeast-fisheries-science-center
+        - title: NOAA Fisheries Open Science
+          external_url: https://nmfs-opensci.github.io/
   
      - title: Data Standards & Formats
        folderitems:
@@ -42,9 +39,13 @@ topnav_dropdowns:
 
      - title: Software & Documentation
        folderitems:
-        - title: <b>IOOS Open Source Software</b>
-        - title: IOOS GitHub Organization
-          external_url: https://github.com/ioos
+        - title: <b>Open Source Software and Resources</b>
+        - title: SEFSC GitHub Organization
+          external_url: https://github.com/sefsc
+        - title: NMFS Open Science
+          external_url: https://nmfs-opensci.github.io/
+        - title: NOAA Fisheries Integrated Toolbox
+          external_url: https://noaa-fisheries-integrated-toolbox.github.io/
         - -----------------------------------------
         - -----------------------------------------
         - title: <b>Software Documentation</b>
@@ -54,32 +55,9 @@ topnav_dropdowns:
           external_url: https://ioos.github.io/erddapy/
         - title: ioos_qc
           external_url: https://ioos.github.io/ioos_qc/
-        - title: Cloud Sandbox
-          external_url: https://www-sandbox.ioos.us/
-        - title: Compliance Checker
-          external_url: https://ioos.github.io/compliance-checker/
-        - title: gliderpy
-          external_url: https://ioos.github.io/gliderpy/
         
      - title: Data Use & Community
        folderitems: 
-        - title: <b>IOOS Data Use & Resources</b>
-        - title: IOOS CodeLab
-          external_url: https://ioos.github.io/ioos_code_lab/
-        - title: Compliance Checker Web 
-          external_url: https://compliance.ioos.us/
-        - -----------------------------------------
-        - -----------------------------------------
-        - title: <b>Community Resources/Events</b>
-        - title: IOOS Code Sprint
-          external_url: https://ioos.github.io/ioos-code-sprint/
-        - title: Marine Bio Data Workshop
-          external_url: https://ioos.github.io/bio_mobilization_workshop/
-        - -----------------------------------------
-        - -----------------------------------------
-        - title: <b>Community Events Archive</b>
-        - title: 2018 IOOS Bio Data Workshop
-          url: https://ioos.github.io/BioData-Training-Workshop/
-        - title: 2019 IOOS Code Sprint
-          external_url: https://glos.org/2019-code-sprint/
-          
+        - title: <b>NMFS Open Science</b>
+        - title: NMFS Open Science
+          external_url: https://nmfs-opensci.github.io/          
