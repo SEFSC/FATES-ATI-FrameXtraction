@@ -4,10 +4,10 @@ output: web
 ##### IOOS edit: replace this field with the documentation site name to appear on the top navigation bar next to the home button #####
 topnav_title: Insert Your Documentation Site Name
 
-site_title: IOOS GitHub Documentation
+site_title: SEFSC FATES GitHub Documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: US IOOS
+company_name: NOAA Fisheries Southeast Fisheries Science Center
 # this appears in the footer
 
 host: 127.0.0.1
@@ -39,7 +39,7 @@ exclude:
 feedback_subject_line: Insert Your Documentation Site Name
 
 ##### IOOS edit: replace this field with the contact email to submit to via the feedback link #####
-feedback_email: data.ioos@noaa.gov
+feedback_email: matt.grossi@noaa.gov
 
 
 # feedback_disable: true
@@ -123,7 +123,7 @@ defaults:
 sidebars:
 - sidebar_ioos
 
-description: "A Jekyll-based documentation theme for data management documentation, software and other technical documentation needs.  This is a skeleton repository for IOOS technical documentation projects to use as a starting point to develop new pages for the https://ioos.github.io site."
+description: "A Jekyll-based documentation theme for data management documentation, software, and other technical documentation needs.  This is a skeleton repository for SEFSC technical documentation projects to use as a starting point to develop new pages for the https://sefsc.github.io site."
 # the description is used in the feed.xml file
 
 #disqus_shortname: idrbwjekyll
@@ -137,16 +137,16 @@ description: "A Jekyll-based documentation theme for data management documentati
 # repository: modify to point to the GitHub repo shorthand name (replace 'your-documentation-repo-name')
 # github_editme_path: provide the basepath to the branch containing source files for this site (replace 'your-documentation-repo-name').  'blob/gh-pages/_docs' is standard and should remain as is
 
-url                      : "https://ioos.github.io"
+url                      : "https://mattgrossi-noaa.github.io"
 
 #baseurl                  : "/your-documentation-repo-name"
-baseurl                  : "/ioos-documentation-jekyll-skeleton"
+baseurl                  : "/sefsc-fates-documentation-jekyll-skeleton"
 
 #repository               : "ioos/your-documentation-repo-name"
-repository               : "ioos/ioos-documentation-jekyll-skeleton"
+repository               : "sefsc/sefsc-fates-documentation-jekyll-skeleton"
 
 #github_editme_path       : "ioos/your-documentation-repo-name/blob/gh-pages/_docs"
-github_editme_path       : "ioos/ioos-documentation-jekyll-skeleton/blob/gh-pages/_docs"
+github_editme_path       : "sefsc/sefsc-fates-documentation-jekyll-skeleton/blob/gh-pages/_docs"
 
 
 #Setup/config for 'ioos_documentation_theme_jekyll' git submodule (do not alter):
