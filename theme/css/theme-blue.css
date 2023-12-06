@@ -1,11 +1,11 @@
 .summary {
     color: #808080;
-    border-left: 5px solid #ED1951;
+    border-left: 5px solid #00559B;
     font-size:16px;
 }
 
 
-h3 {color: #ED1951; }
+h3 {color: #00559B; }
 h4 {color: #808080; }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -106,7 +106,7 @@ li.sidebarTitle {
     margin-top:40px;
     font-weight:normal;
     font-size:130%;
-    color: #ED1951;
+    color: #00559B;
     margin-bottom:10px;
     margin-left: 5px;
 
