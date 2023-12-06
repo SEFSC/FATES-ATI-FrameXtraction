@@ -1,16 +1,16 @@
-# ioos-documentation-jekyll-skeleton
+# sefsc-fates-documentation-jekyll-skeleton
 
-A template/skeleton repository that can be used as a starting point to create a new IOOS GitHub Documentation Site for deployment to https://ioos.github.io/.
+A template/skeleton repository that can be used as a starting point to create a new SEFSC FATES GitHub Documentation Site for deployment to https://sefsc.github.io/.
 
 ### Getting Started
 
 See online documentation for working with this repository at: https://ioos.github.io/ioos-documentation-jekyll-skeleton/howto.html 
 
-_Delete the 'ioos-documentation-jekyll-skeleton' heading above, delete this comment and the remaining text above, modify the reamaining README content below to be relevant to your documentation site, and make sure to change the Jekyll site configuration files accoridng to the instructions in the HOWTO/documentation. Once your site content looks ready to go, it can be pushed to the [IOOS GitHub Organization](https://github.com/ioos) to be deployed_
+_Delete the 'ioos-documentation-jekyll-skeleton' heading above, delete this comment and the remaining text above, modify the remaining README content below to be relevant to your documentation site, and make sure to change the Jekyll site configuration files accoridng to the instructions in the HOWTO/documentation. Once your site content looks ready to go, it can be pushed to the [IOOS GitHub Organization](https://github.com/ioos) to be deployed_
 
 # IOOS Documentation Site: ___________
 
-**Site URL:** https://ioos.github.io/your-documentation-repo-name
+**Site URL:** https://mattgrossi-noaa.github.io/sefsc-fates-documentation-jekyll-skeleton
 
 
 
@@ -22,9 +22,9 @@ Requirements:
 
 Clone this repository:
 ```commandline
-git clone https://github.com/ioos/ioos-documentation-jekyll-skeleton.git
+git clone https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton.git
 ```
-Rename the resulting `ioos-documentation-jekyll-skeleton` directory to a name of your choice, and follow further [Getting Started](https://ioos.github.io/ioos-documentation-jekyll-skeleton/howto.html#getting-started) section in the HOWTO documentation.
+Rename the resulting `SEFSC-FATES-documentation-jekyll-skeleton` directory to a name of your choice, and follow further [Getting Started](https://ioos.github.io/ioos-documentation-jekyll-skeleton/howto.html#getting-started) section in the HOWTO documentation.
 
 To build the site, in your local renamed repo directory, run:
 ```commandline
