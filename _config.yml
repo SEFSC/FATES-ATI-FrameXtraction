@@ -1,20 +1,22 @@
 output: web
-# this property is useful for conditional filtering of content that is separate from the PDF.
+# This property is useful for conditional filtering of content that is separate from the PDF.
 
-##### IOOS edit: replace this field with the documentation site name to appear on the top navigation bar next to the home button #####
+###############################################################################################################################
+# SEFSC EDIT: Replace this field with the documentation site name to appear on the top navigation bar next to the home button #
+###############################################################################################################################
 topnav_title: Insert Your Documentation Site Name
 
 site_title: SEFSC FATES GitHub Documentation
-# this appears in the html browser tab for the site title (seen mostly by search engines, not users)
+# This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: NOAA Fisheries Southeast Fisheries Science Center
-# this appears in the footer
+# This appears in the footer
 
 host: 127.0.0.1
-# the preview server used. Leave as is.
+# The preview server used. Leave as is.
 
 port: 4000
-# the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
+# The port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. In that case, use another port such as 4006.
 
 # Reading Files
 include:
@@ -35,24 +37,28 @@ exclude:
   #- theme/
 
 
-##### IOOS edit: replace this field with the documentation site name to be included in feedback email subject line #####
+#################################################################################################################
+# SEFSC EDIT: Replace this field with the documentation site name to be included in feedback email subject line #
+#################################################################################################################
 feedback_subject_line: Insert Your Documentation Site Name
 
-##### IOOS edit: replace this field with the contact email to submit to via the feedback link #####
+############################################################################################
+# SEFSC EDIT: Replace this field with the contact email to submit to via the feedback link #
+############################################################################################
 feedback_email: matt.grossi@noaa.gov
 
 
-# feedback_disable: true
-# if you uncomment the previous line, the Feedback link gets removed
+#feedback_disable: true
+# If you uncomment the previous line, the Feedback link gets removed
 
-# feedback_text: "Need help?"
-# if you uncomment the previous line, it changes the Feedback text
+#feedback_text: "Need help?"
+# If you uncomment the previous line, it changes the Feedback text
 
-# feedback_link: "http://helpy.io/"
-# if you uncomment the previous line, it changes where the feedback link points to
+#feedback_link: "http://helpy.io/"
+# If you uncomment the previous line, it changes where the feedback link points to
 
 highlighter: rouge
-# library used for syntax highlighting
+# Library used for syntax highlighting
 
 markdown: kramdown
 kramdown:
@@ -61,19 +67,19 @@ kramdown:
  hard_wrap: false
  syntax_highlighter: rouge
 
-# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
+# Filter used to process markdown. Note that kramdown differs from github-flavored markdown in some subtle ways.
 
 collections:
   tooltips:
     output: false
   docs:
     output: true
-    # using /docs/:name causes many link/path failures in hard-coded paths or values
+    # Using /docs/:name causes many link/path failures in hard-coded paths or values
     #  written into the templates (search, nav menu, etc).  Instead just output :name
     #permalink: /docs/:name
     permalink: :name:output_ext
 
-# collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
+# Collections are declared here. This renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true.
 
 defaults:
   -
@@ -84,8 +90,8 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: sidebar_ioos
-      topnav: topnav_ioos
+      sidebar: sidebar_sefsc
+      topnav: topnav_sefsc
   -
     scope:
       path: ""
@@ -94,8 +100,8 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: sidebar_ioos
-      topnav: topnav_ioos
+      sidebar: sidebar_sefsc
+      topnav: topnav_sefsc
 
   -
     scope:
@@ -115,41 +121,44 @@ defaults:
       layout: "post"
       comments: true
       search: true
-      sidebar: sidebar_ioos
-      topnav: topnav_ioos
+      sidebar: sidebar_sefsc
+      topnav: topnav_sefsc
 
-# these are defaults used for the frontmatter for these file types
+# These are defaults used for the frontmatter for these file types
 
 sidebars:
-- sidebar_ioos
+- sidebar_sefsc
 
 description: "A Jekyll-based documentation theme for data management documentation, software, and other technical documentation needs.  This is a skeleton repository for SEFSC technical documentation projects to use as a starting point to develop new pages for the https://sefsc.github.io site."
-# the description is used in the feed.xml file
+# The description is used in the feed.xml file
 
 #disqus_shortname: idrbwjekyll
-# if you're using disqus for comments, add the shortname here. if not, leave this value blank.
+# If you're using disqus for comments, add the shortname here. If not, leave this value blank.
 
 
-################################################################################################################
-# IOOS EDIT HERE! Added settings for IOOS (replace 'ioos-documentation-jekyll-skeleton' with your GitHub repo name):#
-################################################################################################################
+###############################################################################################################################
+# SEFSC EDIT HERE! Added settings for SEFSC (replace 'sefsc-fates-documentation-jekyll-skeleton' with your GitHub repo name): #
+###############################################################################################################################
 # url/baseurl: modify baseurl so that url + baseurl combine to point to the full GitHub repo URL the site will be served from (replace 'your-documentation-repo-name')
 # repository: modify to point to the GitHub repo shorthand name (replace 'your-documentation-repo-name')
 # github_editme_path: provide the basepath to the branch containing source files for this site (replace 'your-documentation-repo-name').  'blob/gh-pages/_docs' is standard and should remain as is
 
+#url                      : "https://sefsc.github.io"
 url                      : "https://mattgrossi-noaa.github.io"
 
 #baseurl                  : "/your-documentation-repo-name"
-baseurl                  : "/sefsc-fates-documentation-jekyll-skeleton"
+baseurl                  : "/SEFSC-FATES-documentation-jekyll-skeleton"
 
-#repository               : "ioos/your-documentation-repo-name"
-repository               : "sefsc/sefsc-fates-documentation-jekyll-skeleton"
+#repository               : "sefsc/your-documentation-repo-name"
+#repository               : "sefsc/SEFSC-FATES-documentation-jekyll-skeleton"
+repository               : "MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton"
 
-#github_editme_path       : "ioos/your-documentation-repo-name/blob/gh-pages/_docs"
-github_editme_path       : "sefsc/sefsc-fates-documentation-jekyll-skeleton/blob/gh-pages/_docs"
+#github_editme_path       : "sefsc/your-documentation-repo-name/blob/gh-pages/_docs"
+#github_editme_path       : "sefsc/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/_docs"
+github_editme_path       : "MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/_docs"
 
 
-#Setup/config for 'ioos_documentation_theme_jekyll' git submodule (do not alter):
+# Setup/config for 'sefsc_fates_documentation_theme_jekyll' git submodule (do not alter):
 source                   : .
 destination              : _site
 plugins_dir              : theme/_plugins
