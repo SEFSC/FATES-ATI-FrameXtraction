@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>sefsc-fates-documentation-jekyll-skeleton</title>
+        <title>SEFSC-FATES-documentation-jekyll-skeleton</title>
         <description>A Jekyll-based documentation theme for data management documentation, software, and other technical documentation needs.  This is a skeleton repository for SEFSC technical documentation projects to use as a starting point to develop new pages for the https://sefsc.github.io site.</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 06 Dec 2023 11:36:12 -0500</pubDate>
-        <lastBuildDate>Wed, 06 Dec 2023 11:36:12 -0500</lastBuildDate>
+        <pubDate>Wed, 06 Dec 2023 16:57:14 -0500</pubDate>
+        <lastBuildDate>Wed, 06 Dec 2023 16:57:14 -0500</lastBuildDate>
         <generator>Jekyll v3.9.3</generator>
         
     </channel>

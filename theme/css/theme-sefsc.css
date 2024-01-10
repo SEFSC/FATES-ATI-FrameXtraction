@@ -1,6 +1,6 @@
 .summary {
     color: #808080;
-    border-left: 5px solid #ED1951;
+    border-left: 5px solid #0093D0;
     font-size:16px;
 }
 
@@ -14,7 +14,7 @@ h4 {color: #808080; }
 }
 
 .nav > li.active > a {
-    background-color: #013088;
+    background-color: #0055A4;
 }
 
 .nav > li > a:hover {
@@ -22,7 +22,7 @@ h4 {color: #808080; }
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
-    background-color: #013088;
+    background-color: #0055A4;
 }
 
 .nav li.thirdlevel > a {
@@ -38,16 +38,16 @@ a[data-toggle="tooltip"] {
 }
 
 .navbar-inverse {
-    background-color: #013088;
-    border-color: #015CAE;
+    background-color: #00467F;
+    border-color: #00467F;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #015CAE;
+    color: #00467F;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #015CAE;
+    background-color: #00467F;
     color: #ffffff;
 }
 
@@ -58,12 +58,12 @@ a[data-toggle="tooltip"] {
 
 .btn-primary {
     color: #ffffff;
-    background-color: #013088;
-    border-color: #013088;
+    background-color: #0055A4;
+    border-color: #0055A4;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #013088;
+    background-color: #0055A4;
 }
 
 .btn-primary:hover,
@@ -72,14 +72,14 @@ a[data-toggle="tooltip"] {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
     background-color: #248ec2;
-    border-color: #013088;
+    border-color: #0055A4;
 }
 
 .printTitle {
-    color: #015CAE !important;
+    color: #00467F !important;
 }
 
-body.print h1 {color: #015CAE !important; font-size:28px !important;}
+body.print h1 {color: #00467F !important; font-size:28px !important;}
 body.print h2 {color: #595959 !important; font-size:20px !important;}
 body.print h3 {color: #E50E51 !important; font-size:14px !important;}
 body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic !important;}
@@ -89,14 +89,15 @@ body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic !im
 }
 
 div.sidebarTitle {
-    color: #015CAE;
+    color: #00467F;
 }
 
 li.sidebarTitle {
     margin-top:40px;
     font-weight:normal;
     font-size:130%;
-    color: #ED1951;
+    /* color: #ED1951; */
+    color: #0093D0;
     margin-bottom:10px;
     margin-left: 5px;
 

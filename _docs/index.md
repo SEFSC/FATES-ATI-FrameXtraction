@@ -1,5 +1,5 @@
 ---
-title: "IOOS Jekyll Documentation Theme Homepage"
+title: "SEFSC Jekyll Documentation Theme Homepage"
 keywords: homepage
 tags: [getting_started, about, overview]
 toc: false
@@ -7,9 +7,9 @@ toc: false
 summary: This is a placeholder markdown document that will render as the index.html page for the documentation site.  Replace content as desired.
 ---
 
-## HOWTO: IOOS Jekyll Documentation Theme
+## HOWTO: SEFSC Jekyll Documentation Theme
 
-Instructions on using this theme can be found in the [HOWTO - IOOS Jekyll Documentation Theme](./howto.html) page.
+Instructions on using this theme can be found in the [HOWTO - SEFSC Jekyll Documentation Theme](./howto.html) page.
 
 
 ## Header 1

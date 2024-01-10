@@ -113,7 +113,9 @@ padding-top: 60px;
 margin-top: -40px;
 font-weight: bold;
 /*color: crimson */
-color: #DC143C
+/*color: #DC143C */
+/* color: #4C9C2E */
+color: #00467F
 }
 
 body h1 {margin-top:40px;}
@@ -238,7 +240,7 @@ p.post-meta {font-size: 80%; color: #777;}
     background-color: white;
     position: absolute;
     top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
-    left: 20px;
+    left: 10px;
     z-index: -1;
     width:223px;
     border-left: 1px solid #dedede;
@@ -342,8 +344,10 @@ footer {
     background-size: cover;
     /*height: 330px;*/
 }
+/* Link text in footer */
 footer > .container > .row > .col-md-3 a {
-  color         : #55D6F8;
+  /*color         : #55D6F8;*/
+  color         : #D9EFF8;
   display       : block;
   padding-bottom: 24px;
   transition: all 0.3s ease;
@@ -381,9 +385,9 @@ footer > .container > .row > .col-md-3 a:hover {
 #footer-col-3 .ggt-icon-border {
   transition: all 0.15s ease;
 }
-
+/* Social media icons */
 #footer-col-3 .ggt-icon-border {
-  background    : #55D6F8;
+  background    : #D9EFF8;
   border-radius : 5px;
   height        : 39px;
   width         : 39px;
@@ -400,7 +404,7 @@ footer > .container > .row > .col-md-3 a:hover {
 }
 
 #footer-col-4 {
-  background-image    : url("../images/logo-ioos-white.png");
+  /* background-image    : url("../images/logo-ioos-white.png"); */
   background-position : 0 50px;
   background-repeat   : no-repeat;
   background-size     : 72px;
@@ -408,9 +412,9 @@ footer > .container > .row > .col-md-3 a:hover {
   line-height         : 16px;
   padding-left        : 90px;
 }
-
+/* Contact Us border */
 #footer-col-4 a.btn {
-  border        : 1px solid #55D6F8;
+  border        : 1px solid #D9EFF8;
   border-radius : 0 !important;
   padding       : 8px 23px !important;
 }
@@ -483,8 +487,9 @@ a.accordion-toggle, a.accordion-collapsed {
     margin: 2px 0;
 }
 
+/* Text color */
 .nav a {
-    color: #333;
+    color: #646464;
     display: block;
     outline: none;
     /*-webkit-border-radius: 4px;
@@ -507,13 +512,15 @@ a.accordion-toggle, a.accordion-collapsed {
     content: '\25b4';
 }
 
+/* "Overview" dark grey background */
+/* Hover text color */
 .nav a:hover, .nav li.active > a {
-    background-color: #8D8D8D;
+    background-color: #7B7B7B;
     color: #f5f5f5;
 }
 
 .nav > li.active > a  {
-background-color: #347DBE;
+background-color: #0093D0;
 }
 
 .nav li a {
@@ -553,8 +560,9 @@ ul#mysidebar {
     padding-right:10px;
 }
 
+/* Hover background */
 .nav li a:hover {
-    background-color: #8D8D8D;
+    background-color: #7B7B7B;
 }
 
 .nav ul li a {
