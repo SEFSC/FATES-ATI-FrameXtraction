@@ -13,6 +13,7 @@ h4 {color: #808080; }
     color: white;
 }
 
+/* Side nav bar, top level active */
 .nav > li.active > a {
     background-color: #0055A4;
 }
