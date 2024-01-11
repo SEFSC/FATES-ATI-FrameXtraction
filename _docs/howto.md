@@ -153,7 +153,7 @@ Follow the sample pattern shown in the theme, specifically looking at the Markdo
 
 ### A note on submodules  
 
-This theme uses two GitHub "submodules".  Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC FATES GitHub Documentation sites. <!--[https://ioos.github.io](https://ioos.github.io). -->
+This theme uses two GitHub "submodules".  Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC FATES GitHub Documentation sites. <!--[https://sefsc.github.io](https://sefsc.github.io). -->
 For example, the menu bar at the top of the page is configured with a single YAML file in a submodule, and the theme code itself, including site functionality and look and feel, is kept within a submodule.
 
 The git submodules for this skeleton repository are sourced from the [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll) repository and located in the following submodule paths (as configured in the `.gitmodules` file in the repository root):
