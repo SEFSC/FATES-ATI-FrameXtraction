@@ -11,9 +11,9 @@ summary: Instructions to create a new SEFSC GitHub documentation site based on t
 
 ## Background
 
-The [SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton) repository is a template, or "skeleton" starting point to create a new GitHub-based documentation site derived from the NOAA Integrated Ocean Observing System IOOS [documentation-theme-jekyll](https://github.com/ioos/documentation-theme-jekyll).
+The [SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository is a template, or "skeleton", starting point to create a new GitHub-based documentation site that uses the NOAA Fisheries Southeast Fisheries Science Center (SEFSC) Fisheries Assessment, Technology, and Engineering Support (FATES) Division [documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} documentation format and functionality. This documentation theme is derived from the NOAA Integrated Ocean Observing System (IOOS) [documentation-theme-jekyll](https://github.com/ioos/documentation-theme-jekyll){:target="_blank" rel="noopener"} and its upstream parent repositories, which is used for all [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} sites.
 
-The instructions below will allow you to create a new GitHub Pages site that follows the look and feel/functionality of the Jekyll documentation theme used by the [https://ioos.github.io](https://ioos.github.io) site.  You can then add/edit the template markdown documents with your own content.
+The instructions below will allow you to create a new GitHub Pages site that follows the look and feel/functionality of the Jekyll documentation theme used by the [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} site. You can then add/edit the template markdown documents with your own content.
 
 
 
@@ -23,9 +23,9 @@ The instructions below will allow you to create a new GitHub Pages site that fol
 
 This is done on the GitHub website.  These steps assume you already have a GitHub account in place.
 
-1. Browse to the [SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton) repository, select the "Use this template" button, and select "Create your own repository": ![GitHub use template image](https://ioos.github.io/use-template.png){:style="display:block; border: 1px solid"}
+1. Browse to the [SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository, select the "Use this template" button, and select "Create a new repository": ![GitHub use template image](https://ioos.github.io/use-template.png){:style="display:block; border: 1px solid"}
 
-1. Name the repository, select the owner (your own account or a GitHub organization you have write permissions to), give it a description if desired, and select other options as appropriate.  At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
+1. Select the repository owner (your own account or a GitHub organization you have write permissions to) and type a name for the repository. If the new repository is for SEFSC-related work, the repository name should adhere to the SEFSC repository naming convention as depicted in the [SEFSC GitHub SOP](https://github.com/SEFSC/SEFSC-Resources/blob/18a6c7e98b3e9b71f5e5912282d9d7f08c0e0a1a/SEFSC%20GitHub%20SOP%20and%20User%20Agreement%20Form/SEFSC%20Github%20SOP%20-%20RR%20-%20LON%20-%20BGM.pdf){:target="_blank" rel="noopener"}. Select other options as appropriate. At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
 
 1. From your new repository page, download or "clone" the repository to edit it locally using Jekyll/Ruby.  The local editing process assumes you have a git client installed in order to push your edited files back to GitHub, and that you're able to install the dependencies to run Jekyll (Ruby programming language).  For those who do not have git, or cannot run Ruby, editing can be accomplished on the GitHub website one file at a time (see [Step 2: Edit your documentation site content](#step-2-edit-your-documentation-site-content) below for details).  ![GitHub clone example image](https://ioos.github.io/clone.png){:style="width: 350px; display:block; border: 1px solid"}
 
@@ -47,9 +47,9 @@ This approach allows instantaneous rendering of the site exactly as it will appe
 
 **Setting up the Ruby/Jekyll environment:** 
 
-Instructions are avaialable in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html) - this is the upstream Jekyll theme that the SEFSC FATES documentation theme is based on.  
+Instructions are avaialable in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"} - this is the upstream Jekyll theme that the SEFSC FATES documentation theme is based on.  
 
-Follow these steps first to get your Jekyll environment running. In particular, use the [Option 2: Build theme with github-pages gem](https://idratherbewriting.com/documentation-theme-jekyll/index.html#option2) approach to run the site, or read on to the section below.
+Follow these steps first to get your Jekyll environment running. In particular, use the [Option 2: Build theme with github-pages gem](https://idratherbewriting.com/documentation-theme-jekyll/index.html#option2){:target="_blank" rel="noopener"} approach to run the site, or read on to the section below.
 
 **Running the site in Jekyll:**
 
@@ -66,7 +66,7 @@ bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose 
 
 By default, the `bundle exec jekyll serve` command will serve the site on your machine at: 
 
-[http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/](http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/)
+[http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/](http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"}
 
 Once you have the site running, you will want to modify the settings found in the `_config.yml` and `_config_dev.yml` files to change the site URL from "SEFSC-FATES-documentation-jekyll-skeleton" to a URL of your choosing, and make other modifications as appropriate.  
 
@@ -79,7 +79,7 @@ When you are setting up a new documentation site initially, you will likely want
 2. Open it for editing by clicking on the "pencil" icon at the right side above the file content;
 3. Make all changes, preview them to make sure that everything is okay, and commit them to the "gh-pages" (make sure that the "Commit directly to the gh-pages branch" option is checked).
 
-A visual walkthrough of this process is also available in the [Editing Markdown Files for GitHub Pages](https://docs.google.com/presentation/d/1OBZumh-vK3tynt90_2GH_Xdp1LVuI-wao70FVzGp3Vg/edit#slide=id.p) Google Slides presentation.
+A visual walkthrough of this process is also available in the [Editing Markdown Files for GitHub Pages](https://docs.google.com/presentation/d/1OBZumh-vK3tynt90_2GH_Xdp1LVuI-wao70FVzGp3Vg/edit#slide=id.p){:target="_blank" rel="noopener"} Google Slides presentation.
 
 
 ## Editing and configuring your documentation site
@@ -114,7 +114,7 @@ permalink: mydoc_alerts
 
 The `sidebar: sefsc_sidebar` refers to the `_data/sidebars/sefsc_sidebar.yml` file. The sidebar data file uses a specific YAML syntax that must be followed. Follow the sample pattern shown in the theme, especially looking at `sefsc_sidebar.yml` as an example.
 
-For more details on the sidebar syntax, see [Sidebar navigation](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_sidebar_navigation.html).
+For more details on the sidebar syntax, see [Sidebar navigation](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_sidebar_navigation.html){:target="_blank" rel="noopener"}.
 
 
 ### Editing markdown documents
@@ -153,10 +153,10 @@ Follow the sample pattern shown in the theme, specifically looking at the Markdo
 
 ### A note on submodules  
 
-This theme uses two GitHub "submodules".  Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC FATES GitHub Documentation sites. <!--[https://sefsc.github.io](https://sefsc.github.io). -->
-For example, the menu bar at the top of the page is configured with a single YAML file in a submodule, and the theme code itself, including site functionality and look and feel, is kept within a submodule.
+This theme uses two GitHub *submodules*. Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC FATES GitHub Documentation sites. <!--[https://sefsc.github.io](https://sefsc.github.io). -->
+For example, the menu bar at the top of the page is configured with a single YAML file in a submodule, and the theme code itself, including site functionality and look and feel, is kept within a second submodule.
 
-The git submodules for this skeleton repository are sourced from the [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll) repository and located in the following submodule paths (as configured in the `.gitmodules` file in the repository root):
+The git submodules for this skeleton repository are sourced from the [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository and located in the following submodule paths (as configured in the `.gitmodules` file in the repository root):
 
 |**Submodule Path**|**Branch Name**|**Description**|
 |--------|------------|------------|
@@ -215,25 +215,25 @@ On branch gh-pages
 Your branch is up-to-date with "origin/gh-pages".
 nothing to commit, working directory clean
 ```
-Working with submodules can be tricky; however, the steps above should work in most cases.  For full documentation on the `git submodule` command, see: [https://git-scm.com/docs/git-submodule](https://git-scm.com/docs/git-submodule).  
+Working with submodules can be tricky; however, the steps above should work in most cases.  For full documentation on the `git submodule` command, see: [https://git-scm.com/docs/git-submodule](https://git-scm.com/docs/git-submodule){:target="_blank" rel="noopener"}.  
 
-There should not be any need to modify code in either of the submodules manually; they are meant to be identical across all of the individual SEFSC FATES GitHub Documentation sites.  They need only to be properly updated in local working copies before submitting any changes back to GitHub.  Both submodules are also automatically synchronized in GitHub with changes in the source [ioos/documentation-theme-jekyll](https://github.com/ioos/documentation-theme-jekyll) repository via GitHub Actions as configured in the `.github/workflows/sync_theme.yml` file.  For the MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton repository, that file can be found [here](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/.github/workflows/sync_theme.yml).
+There should not be any need to modify code in either of the submodules manually; they are meant to be identical across all of the individual SEFSC FATES GitHub Documentation sites.  They need only to be properly updated in local working copies before submitting any changes back to GitHub.  Both submodules are also automatically synchronized in GitHub with changes in the source [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository via GitHub Actions as configured in the `.github/workflows/sync_theme.yml` file. For the MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton repository, that file can be found [here](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/.github/workflows/sync_theme.yml){:target="_blank" rel="noopener"}.
 
 
 
 ## References  
 
- - [Original Documentation for the Documentation Theme for Jekyll](http://idratherbewriting.com/documentation-theme-jekyll/index.html)
-   - [Ruby & Jekyll Installation and Setup Section](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_about_ruby_gems_etc.html)
- - [A Comprehensive Guide for Jekyll](https://jekyllrb.com/docs/)
- - [Ruby documentation & downloads](https://www.ruby-lang.org/en/)
-    - [Ruby Installer for Windows](http://rubyinstaller.org/downloads/)
-    - [A Guide on Ruby Installation and Setup for Windows 10](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-and-set-up-a-local-programming-environment-on-windows-10)
- - [General information on the way GitHub uses Jekyll in "GitHub Pages" sites](https://help.github.com/articles/about-github-pages-and-jekyll/)
-    - [In particular, how to use a specially-named branch "gh-pages" to push documentation for a "Project" page (which most repos will fall under)](https://help.github.com/articles/user-organization-and-project-pages/)
+ - [Original Documentation for the Documentation Theme for Jekyll](http://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"}
+   - [Ruby & Jekyll Installation and Setup Section](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_about_ruby_gems_etc.html){:target="_blank" rel="noopener"}
+ - [A Comprehensive Guide for Jekyll](https://jekyllrb.com/docs/){:target="_blank" rel="noopener"}
+ - [Ruby documentation & downloads](https://www.ruby-lang.org/en/){:target="_blank" rel="noopener"}
+    - [Ruby Installer for Windows](http://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"}
+    - [A Guide on Ruby Installation and Setup for Windows 10](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-and-set-up-a-local-programming-environment-on-windows-10){:target="_blank" rel="noopener"}
+ - [General information on the way GitHub uses Jekyll in "GitHub Pages" sites](https://help.github.com/articles/about-github-pages-and-jekyll/){:target="_blank" rel="noopener"}
+    - [In particular, how to use a specially-named branch "gh-pages" to push documentation for a "Project" page (which most repos will fall under)](https://help.github.com/articles/user-organization-and-project-pages/){:target="_blank" rel="noopener"}
  - GitHub Kramdown:
-    - [Kramdown Syntax](https://kramdown.gettalong.org/syntax.html)
-    - [Kramdown Quick Reference](https://kramdown.gettalong.org/quickref.html)
+    - [Kramdown Syntax](https://kramdown.gettalong.org/syntax.html){:target="_blank" rel="noopener"}
+    - [Kramdown Quick Reference](https://kramdown.gettalong.org/quickref.html){:target="_blank" rel="noopener"}
 
 ## FAQ
 
