@@ -9,7 +9,7 @@ summary: This is a placeholder markdown document that will render as the index.h
 
 ## HOWTO: SEFSC Jekyll Documentation Theme
 
-Instructions on using this theme can be found in the [HOWTO - SEFSC Jekyll Documentation Theme](./howto.html) page.
+Instructions on using this theme can be found in the [HOWTO - SEFSC Jekyll Documentation Theme](./howto.html){:target="_blank" rel="noopener"} page.
 
 
 ## Header 1
