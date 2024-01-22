@@ -50,7 +50,7 @@ entries:
       output: web
 
 
-#Always visible folder name that contains top-level menu items with links to 2nd document/page
+# Always visible folder name that contains top-level menu items with links to 2nd document/page
   - title: "HOWTO - SEFSC FATES Jekyll Theme"
     output: web, pdf
 
@@ -61,7 +61,7 @@ entries:
       url: /howto.html
       output: web
 
-#A link to the 2nd rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page', e.g. '
+# A link to the 2nd rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page', e.g. '
     - title: Background
       url: /howto.html#background
       output: web
