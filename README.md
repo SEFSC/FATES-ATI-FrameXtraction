@@ -22,7 +22,7 @@ Clone this repository:
 ```commandline
 git clone https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton.git
 ```
-Rename the resulting `SEFSC-FATES-documentation-jekyll-skeleton` directory to a name of your choice, and follow further [Getting Started](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/howto.html#getting-started){:target="_blank" rel="noopener"} section in the HOWTO documentation.
+Rename the resulting `SEFSC-FATES-documentation-jekyll-skeleton` directory to a name of your choice, and follow further [Getting Started](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/howto.html#getting-started) section in the HOWTO documentation.
 
 To build the site, in your local renamed repo directory, run:
 ```commandline
