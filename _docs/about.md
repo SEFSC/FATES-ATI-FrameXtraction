@@ -143,13 +143,13 @@ This is done on the GitHub website and assumes the user already has a GitHub acc
 
 5. Modify the description, if desired. The recommendation is to specify what the repo is (in one or two sentences at most) and where it was forked from. For example:
 
-    > *A Jekyll-based theme designed for documentation and help systems. Forked from NOAA IOOS (https://github.com/ioos/documentation-theme-jekyll), which itself was forked from source repo: https://github.com/tomjohnson1492/documentation-theme-jekyll for IOOS DMAC documentation use.*
+    > A Jekyll-based theme designed for documentation and help systems. Forked from NOAA IOOS (https://github.com/ioos/documentation-theme-jekyll), which itself was forked from source repo: https://github.com/tomjohnson1492/documentation-theme-jekyll for IOOS DMAC documentation use.
 
 6. Unselect “Copy the main branch only” box. This repo currently has two branches: the **main** branch contains the bulk of the theme, and a second **navbars** branch controls the horizontal navigation bar. Both are needed and more may be added in the future.
 
 7. Click “Create fork”
 
-### Step 2. Clone the repository locally for easier editing (optional)
+### Step 2: Clone the repository locally for easier editing (optional)
 
 Cloning the repository onto your local machine can make editing files easier, especially formatted script and configuration files for which GitHub has only limited built-in dynamic formatting capabilities. The following steps assume [GitHub](https://desktop.github.com/){:target="_blank" rel="noopener"} and [Git Command Line Interface (CLI)](https://cli.github.com/){:target="_blank" rel="noopener"} are installed locally.
 
@@ -170,11 +170,11 @@ Cloning the repository onto your local machine can make editing files easier, es
    ```bash
    git clone <URL>
    ```
-   where <URL> is the web URL from step 3.
+    where \<URL> is the web URL from [Step 2](#step-2-clone-the-repository-locally-for-easier-editing-optional).3.
 
 5. Press enter. The repo will now be downloaded to your local machine.
 
-Alternatively, after step 1, either use the “Open with GitHub Desktop” or the  “Download ZIP” options shown above to download the repo. Be sure to unzip it if you retrieve it this way.
+Alternatively, after [Step 2](#step-2-clone-the-repository-locally-for-easier-editing-optional).1, either use the “Open with GitHub Desktop” or the “Download ZIP” options shown above to download the repo. Be sure to unzip it if you retrieve it this way.
 
 ### Step 3: Customize the navbar
 
@@ -223,7 +223,7 @@ Once all the changes above have been made, you are ready to push them up to the 
    git add <navbar_filename>.yml   
    ```
 
-   where `<navbar_filename>` is the file name assigned in [Step 2](#step-2-clone-the-repository-locally-for-easier-editing-optional) above.
+   where `<navbar_filename>` is the file name assigned in [Step 3](#step-3-customize-the-navbar).2 above.
 
 2. Commit the changes using a descriptive commit message
 
@@ -247,7 +247,7 @@ A number of changes were made to adapt the custom IOOS theme to SEFSC. The list 
    git checkout main
    ```
 
-2. In the `css` subdirectory, rename `theme-ioos.css` to `theme-sefsc.css`
+2. In the `.../theme/css/` subdirectory, rename `theme-ioos.css` to `theme-sefsc.css`
 
 3. Upload NOAA Fisheries logos to `images` subdirectory
 
@@ -255,46 +255,43 @@ A number of changes were made to adapt the custom IOOS theme to SEFSC. The list 
 
 5. Customize the page footer in `_includes/footer.html`:
 
-   a. Update the external URLs. Opted to replace
-
-    1. https://ioos.noaa.gov → https://noaa.gov
-    2. https://ioos.us → https://fisheries.noaa.gov 
-    3. Add URL for SEFSC
+    1. Update the external URLs. Opted to replace
+        - https://ioos.noaa.gov → https://noaa.gov
+        - https://ioos.us → https://fisheries.noaa.gov 
+        - Add URL for SEFSC
    
-   b. Update Social Media URLs
+    2. Update Social Media URLs
 
-   c. Update address and phone number with SEFSC Headquarters info
+    3. Update address and phone number with SEFSC Headquarters info
    
-   d. Update “mailto” email address for “Contact Us” button
+    4. Update “mailto” email address for “Contact Us” button
 
 6. In `_includes/head.html`, change the theme CSS file to be used
 
-   a. `…/theme/css/theme-ioos.css` → `.../theme/css/theme-sefsc.css`
-
-   b. `.../theme/images/favicon.ico` → `../theme/images/favicon.png`
+    1. `.../theme/css/theme-ioos.css` → `.../theme/css/theme-sefsc.css`
+    2. `.../theme/images/favicon.ico` → `.../theme/images/favicon.png`
 
 7. Customize the site header in `_includes/topnav.html`
 
-   a. Add a new “avatar-container-layout” container to create a two-column header
+    1. Add a new “avatar-container-layout” container to create a two-column header
 
-   b. Change hyperlink URL from IOOS to NOAA Fisheries
+    2. Change hyperlink URL from IOOS to NOAA Fisheries
 
-   c. Change icon to be used:
+    3. Change icon to be used:
+        - `.../theme/images/IOOS_Emblem_Tertiary_B_RGB.png` → `.../theme/images/NOAA_FISHERIES_logoH.png`
+        - Add “NOAA Fisheries” as alternative text if header logo cannot be found
 
-      1. `.../theme/images/IOOS_Emblem_Tertiary_B_RGB.png` → `.../theme/images/NOAA_FISHERIES_logoH.png`
-      2. Add “NOAA Fisheries” as alternative text if header logo cannot be found
+    4. Add “Southeast Fisheries Science Center” text with hyperlink to header (note that this may be replaced with an image logo in the future)
 
-   d. Add “Southeast Fisheries Science Center” text with hyperlink to header (note that this may be replaced with an image logo in the future)
+8. Customize website colors in `.../theme/css/customstyles.css` to align with NOAA Fisheries Brand Standards
 
-8. Customize website colors in `css/customstyles.css` to align with NOAA Fisheries Brand Standards
+9. In `.../theme/css/lavish-bootstrap.css`:
 
-9. In `css/lavish-bootstrap.css`:
-
-   a. Add CSS code for new “avatar-container-layout” container to support two-column header
+    1. Add CSS code for new “avatar-container-layout” container to support two-column header
    
-   b. Add CSS code to support text in header
+    2. Add CSS code to support text in header
 
-   c. Adjust and set sizes, display settings, paddings, *etc.* to set the position of all header bar components including logos and text
+    3. Adjust and set sizes, display settings, paddings, *etc.* to set the position of all header bar components including logos and text
 
 ### Step 6: Push the changes back to GitHub
 
@@ -312,6 +309,8 @@ The repo just created provides the layout and formatting customization that allo
 
 The next step is to create another repository to serve as a template repo for all documentation pages moving forward. NOAA IOOS again provides a starting point for this, a repo called “[ioos-documentation-jekyll-skeleton](https://github.com/ioos/ioos-documentation-jekyll-skeleton){:target="_blank" rel="noopener"}” that also [demonstrates the web page](https://ioos.github.io/ioos-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} and explains how to use the template. This repo contains one or more Markdown (.md) files that contains the content of the page. The user need only replace the placeholder text with the necessary sections, headers, and narratives. In the case of a model source code already hosted on GitHub, this template can be added to the existing repo as its own branch. As with the theme files, everything in this skeleton repo is fully version controlled. The creation and customization of the IOOS documentation skeleton repo for SEFSC Fates is discussed next. Note that there is more than one way to do this – even shorter methods requiring fewer steps – but the procedure below is what was followed in this particular instance.
 
+
+
 ## Creating a documentation skeleton repository
 
 ### Step 1: Clone the IOOS skeleton repository locally
@@ -324,26 +323,26 @@ This is done on the GitHub website and assumes the user already has a GitHub acc
 
 3. Create a directory on your local machine where the contents of the repo will be downloaded. This can be the same directory to which the theme repo was cloned, but do not clone it *within* the theme repo. For example, your local file structure might look like:
 
-```bash
-.
-└── Documents/
-    └── gh-pages/
-        ├── documentation-theme-jekyll/
-        │   └── ...all theme subdirectories and files
-        └── ioos-documentation-jekyll-skeleton/
-            └── ...all template subdirectories and files
-```
-But *not*:
+   ```bash
+   .
+   └── Documents/
+      └── gh-pages/
+         ├── documentation-theme-jekyll/
+         │   └── ...all theme subdirectories and files
+         └── ioos-documentation-jekyll-skeleton/
+             └── ...all template subdirectories and files
+   ```
+   But *not*:
 
-```bash
-.
-└── Documents/
-    └── gh-pages/
-        └── documentation-theme-jekyll/
+   ```bash
+   .
+   └── Documents/
+      └── gh-pages/
+         └── documentation-theme-jekyll/
             ├── ...all theme subdirectories and files
             └── ioos-documentation-jekyll-skeleton/
-                └── ...all template subdirectories and files
-```
+               └── ...all template subdirectories and files
+   ```
 
    Notice that both repos are downloaded in a designated `gh-pages` local folder (can be called anything), but that the two repos *are not nested within each other*.
 
@@ -353,11 +352,11 @@ But *not*:
    git clone <URL>
    ```
 
-   where <URL> is the web URL from step 3.
+   where \<URL> is the web URL from [Step 1](#step-1-clone-the-ioos-skeleton-repository-locally).2.
 
 5. Press enter. The repo will now be downloaded to your local machine.
 
-Alternatively, after step 1, either use the “Open with GitHub Desktop” or the  “Download ZIP” options shown above to download the repo. Be sure to unzip it if you retrieve it this way.
+   Alternatively, after [Step 1](#step-1-clone-the-ioos-skeleton-repository-locally).1, either use the “Open with GitHub Desktop” or the “Download ZIP” options shown above to download the repo. Be sure to unzip it if you retrieve it this way.
 
 6. Navigate into the new repository in terminal or Command Prompt
 
@@ -379,27 +378,27 @@ Alternatively, after step 1, either use the “Open with GitHub Desktop” or th
 
 4. Add a description. The recommendation is to specify what the repo is (in one or two sentences at most) and where it was forked from. For example:
 
-   > *A GitHub Pages documentation template for SEFSC FATES based on the ioos-documentation-jekyll-skeleton repo.*
+   > A GitHub Pages documentation template for SEFSC FATES based on the ioos-documentation-jekyll-skeleton repo.
 
 5. Click “Create repository”
 
 6. Click the green “< > Code” button and copy the web URL of the repo. We’ll need this shortly.
 
-### Step 3. Create a new local repository
+### Step 3: Create a new local repository
 
 1. Back in the directory created in [Step 1](#step-1-clone-the-ioos-skeleton-repository-locally).3, create a new directory that will contain the new custom template repository. For convenience, it is recommended that it be named the same as the remote repository created in [Step 2](#step-2-create-a-new-remote-repository).3, but this is not a necessity, since this is the local copy only. It can be named according to whatever naming convention you prefer. For example:
 
-```bash
-.
-└── Documents/
-    └── gh-pages/
-        ├── documentation-theme-jekyll/
-        │   └── ...all theme subdirectories & files
-        └── ioos-documentation-jekyll-skeleton/
-            └── ...original template subdirectories & files
-        └── SEFSC-FATES-documentation-jekyll-skeleton/
-            └── ...all new template subdirectories & files   
-```
+   ```bash
+   .
+   └── Documents/
+      └── gh-pages/
+         ├── documentation-theme-jekyll/
+         │   └── ...all theme subdirectories and files
+         └── ioos-documentation-jekyll-skeleton/
+               └── ...all original template subdirectories and files
+         └── SEFSC-FATES-documentation-jekyll-skeleton/
+               └── ...all new template subdirectories and files
+   ```
 
 2. Navigate into that directory in the Terminal or Command Prompt
 
@@ -424,7 +423,7 @@ Alternatively, after step 1, either use the “Open with GitHub Desktop” or th
    git push -u origin main
    ```
 
-### Step 4. Create a new orphan branch for GitHub Pages
+### Step 4: Create a new orphan branch for GitHub Pages
 
 An orphan branch on GitHub is one whose commit history is independent of all other branches in the repo. The details are beyond the scope of this document, but the steps that follow will set one up. Orphan branches used for GitHub Pages are customarily called “gh-pages”.
 
@@ -451,7 +450,7 @@ An orphan branch on GitHub is one whose commit history is independent of all oth
 
 The new repo now contains a duplicate, yet isolated, copy of the “ioos-documentation-jekyll- skeleton” repo. *Duplicated*, meaning that it contains all of the same files and subdirectories used to create the IOOS Documentation site; *isolated* in the sense that the new repo has its own version control history that is no longer linked to the original repository. You can now delete the “ioos-documentation-jekyll-skeleton” directory and its content from your local computer if you want, although it may be helpful to retain it as a backup until everything is configured properly.
 
-### Step 5. Link the theme and skeleton repositories
+### Step 5: Link the theme and skeleton repositories
 
 This is where the theme created [above](#custom-sefsc-theme-for-github-pages-documentation-sites) gets added to the [documentation skeleton](#github-pages-documentation-template) being created now. This can be done using [GitHub submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules){:target="_blank" rel="noopener"}, which allow *theme files* to be contained in their own repository and then embedded into a separate repository that contains the *content files* for the web page. Recall that the “[documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"}” repository has two branches, **main** and **navbars**. Each of these branches will be connected to the documentation repository as a separate submodule.
 
@@ -495,21 +494,21 @@ This is where the theme created [above](#custom-sefsc-theme-for-github-pages-doc
 
 4. In the web browser, on the “SEFSC-FATES-documentation-jekyll-skeleton” repo landing page, click the “Settings” tab. Then, from the sidebar, “Actions” → “General”
 
- 5. Under “Workflow permissions” select “Read and write permissions” to allow GitHub Actions to update the submodules (which is a write action). Click “Save” when done.
+5. Under “Workflow permissions” select “Read and write permissions” to allow GitHub Actions to update the submodules (which is a write action). Click “Save” when done.
 
 The “SEFSC-FATES-documentation-jekyll-skeleton” repo now contains a new directory called `theme @ xxxxxxx`, where *xxxxxxx* is the most most recent commit identifier on the “main” branch of “documentation-theme-jekyll”. Inside this new directory are all of the theme files customized above. Also, in the `_data` directory, there is a new `navbars @ yyyyyyy`, where *yyyyyyy* is the most recent commit identifier on the “navbars” branch of “documentation-theme-jekyll”. In this file is the `topnav` yml file created earlier. More on this later.
 
-### Step 6. Set up local machine for local editing (optional)
+### Step 6: Set up local machine for local editing (optional)
 
 Editing the site locally is often easier than making the changes on GitHub, especially for formatted script and configuration files for which GitHub has only limited built-in dynamic formatting capabilities. To do this, however, Jekyll and Ruby need to be installed. If these are already installed, or if you do not intend to edit locally, skip to [Step 7](#step-7-configure-the-new-documentation-template-repository). From the [Jekyll Documentation Theme Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll){:target="_blank" rel="noopener"}:
 
 1. [Install Ruby](https://idratherbewriting.com/documentation-theme-jekyll/mydoc_install_jekyll_on_windows.html){:target="_blank" rel="noopener"}:
 
-   a. [Download](https://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"} the latest RubyInstaller with Devkit
+    1. [Download](https://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"} the latest RubyInstaller with Devkit
 
-   b. Double-click the downloaded file to install
+    2. Double-click the downloaded file to install
 
-   c. Run “ridk install” on the last step of the installation wizard
+    3. Run “ridk install” on the last step of the installation wizard
 
 2. Open new command prompt window or Git Bash session
 
@@ -521,21 +520,21 @@ Editing the site locally is often easier than making the changes on GitHub, espe
 
 4. Install Jekyll theme dependencies:
 
-   a. Navigate to the directory containing the Jekyll documentation theme repo
+    1. Navigate to the directory containing the Jekyll documentation theme repo
    
-   b. Update bundle
+    2. Update bundle
 
-   ```bash
-   bundle update
-   ```
+    ```bash
+    bundle update
+    ```
    
-   (This terminated with an error on the first try, simply rerunning it worked.)
+    (This terminated with an error on the first try, simply rerunning it worked.)
 
-   c. If Ruby version is 3.0 or higher, [“webrick” will need to be manually installed](https://github.com/jekyll/jekyll/issues/8523){:target="_blank" rel="noopener"} in order for this particular theme to work:
+    3. If Ruby version is 3.0 or higher, [“webrick” will need to be manually installed](https://github.com/jekyll/jekyll/issues/8523){:target="_blank" rel="noopener"} in order for this particular theme to work:
 
-   ```bash
-   bundle add webrick
-   ```
+    ```bash
+    bundle add webrick
+    ```
 
 5. The site can now be run locally in Jekyll, as discussed in [Getting started with IOOS Jekyll Documentation Theme Skeleton](https://ioos.github.io/ioos-documentation-jekyll-skeleton/howto.html){:target="_blank" rel="noopener"}:
 
@@ -545,60 +544,59 @@ Editing the site locally is often easier than making the changes on GitHub, espe
 
    The local site will be available at http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/ once configuration below is completed.
 
-### Step 7. Configure the new documentation template repository
+### Step 7: Configure the new documentation template repository
 
 We are now ready to customize the new documentation repository and make it into a template repo. If done locally, any changes can be viewed at any time at the local site above by refreshing the page (be sure to first save the changes in whatever file you’re working in.) The following steps can theoretically be completed in any order.
 
-1. In `_data/sidebars`, rename `sidebar_ioos.yml` using the same naming convention used in [Step 3](#step-3-customize-the-navbar).2 above for `topnav_ioos.yml`. Inside this document, change the title “HOWTO - …” at approximately Line 54.
+1. In `_data/sidebars/`, rename `sidebar_ioos.yml` using the same naming convention used in [Step 3](#step-3-customize-the-navbar).2 above for `topnav_ioos.yml`. Inside this document, change the title “HOWTO - …” at approximately Line 54.
 
 2. Change the “baseurl” the `_config_dev.yml` file, which contains settings for local development, to match the name of the new repository. This will make the localhost URL above work. Commit when finished.
 
 3. Update the `_config.yml` file to replace any references to IOOS with SEFSC-FATES, including in commented lines, being sure to change the following elements:
 
-   a. “site_title”
+    1. “site_title”
 
-   b. “company_name”
+    2. “company_name”
 
-   c. “feedback_email”
+    3. “feedback_email”
 
-   d. Values for “sidebar” and “topnav” in all four places.
+    4. Values for “sidebar” and “topnav” in all four places.
+        - Set the value for “topnav” to be the new name of the `topnav` yml file set in [Step 3](#step-3-customize-the-navbar).2 above (e.g., topnav_ioos → topnav_sefsc).
+        - Set the value for “sidebar” to be the new name of the `sidebar` yml file from [Step 7](#step-7-configure-the-new-documentation-template-repository).1 (e.g., sidebar_ioos → sidebar_sefsc).
 
-    1. Set the value for “topnav” to be the new name of the `topnav` yml file set in [Step 3](#step-3-customize-the-navbar).2 above (e.g., topnav_ioos → topnav_sefsc).
-    2. Set the value for “sidebar” to be the new name of the `sidebar` yml file from [Step 7](#step-7-configure-the-new-documentation-template-repository).1 (e.g., sidebar_ioos → sidebar_sefsc).
+    5. “description”
 
-   e. “description”
+    6. “url”
 
-   f. “url”
+    7. “baseurl”
 
-   g. “baseurl”
+    8. “repository”
 
-   h. “repository”
+    9. “github_editme_path”
 
-   i. “github_editme_path”
+    10. Any comments throughout the file
 
-   j. Any comments throughout the file
-
-   Note: Do not change placeholder text such as “Insert Your Documentation Site Name”, as this will be replaced with actual content for individual documentation pages.  Commit when finished.
+    Note: Do not change placeholder text such as “Insert Your Documentation Site Name”, as this will be replaced with actual content for individual documentation pages.  Commit when finished.
 
 4. Update the `README.md` file. Commit when finished.
 
-   a. Remove any references to IOOS, replacing with SEFSC-FATES
+    1. Remove any references to IOOS, replacing with SEFSC-FATES
 
-   b. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
+    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
 
 5. Update the `_docs/howto.md` file. Commit when finished.
 
-   a. Remove any references to IOOS, replacing with SEFSC-FATES
+    1. Remove any references to IOOS, replacing with SEFSC-FATES
 
-   b. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
+    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
 
 6. Update the `_docs/index.md` file. Commit when finished.
 
-   a. Remove any references to IOOS, replacing with SEFSC-FATES
+    1. Remove any references to IOOS, replacing with SEFSC-FATES
 
-   b. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
+    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
 
-   c. Add mandatory and/or optional headers and subheaders to be used when creating software or model documentation
+    3. Add mandatory and/or optional headers and subheaders to be used when creating software or model documentation
 
 7. Push all changes to gh-pages branch. It will take a few minutes for GitHub to build the site, but if everything was done correctly, the new template site should look like the original IOOS template but customized for SEFSC FATES.
 
