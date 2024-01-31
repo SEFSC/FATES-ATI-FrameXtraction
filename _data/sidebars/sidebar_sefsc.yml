@@ -8,47 +8,70 @@ entries:
   folders:
 
 # Always visible folder name that contains top-level menu items with links to 1st document/page
-  - title: Homepage
+  - title: Read the Docs
     output: web, pdf
 
     folderitems:
 
 # A link to the top of the homepage (causes accordion to be open by default)
-    - title: Overview
+    - title: Application Name
       url: /index.html
       output: web
 
 # Top-level menu item #1
-    - title: Homepage Header 1
+    - title: About
 
 # A link to the 1st rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page'
-      url: /index.html#header-1
-      output: web
-
-    - title: Homepage Header 2
-      url: /index.html#header-2
+      url: /index.html#about
       output: web
 
       subfolders:
 
 # A subfolder name that contains sub-level menu items with links to 2nd document/page (note quotes are required for entries with special characters like '#')
-      - title: Sub-headers
+      - title: Installation
         output: web
 
         subfolderitems:
 
-        - title: "Sub-header #1"
-          url: /index.html#sub-header-1
+        - title: "Requirements"
+          url: /index.html#requirements
           output: web
 
-        - title: "Sub-header #2"
-          url: /index.html#sub-header-2
+        - title: "Dependencies"
+          url: /index.html#dependencies
           output: web
 
-    - title: Homepage Header 3
-      url: /index.html#header-3
+        - title: "Installing the application"
+          url: /index.html#installing-the-application
+          output: web
+
+      subfolders:
+
+      - title: User Guide
+        output: web
+
+        subfolderitems:
+
+        - title: "Overview"
+          url: /index.html#overview
+          output: web
+
+        - title: "Usage"
+          url: /index.html#usage
+          output: web
+
+        - title: "Options"
+          url: /index.html#options
+          output: web
+
+    - title: Release Notes
+      url: /index.html#release-notes
       output: web
 
+# Do not remove this one!
+    - title: "Disclaimer"
+      url: /index.html#disclaimer
+      output: web
 
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
   - title: "HOWTO - Using the SEFSC FATES Jekyll Theme"
