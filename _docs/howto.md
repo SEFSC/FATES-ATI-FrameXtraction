@@ -114,6 +114,13 @@ permalink: mydoc_alerts
 
 The `sidebar: sefsc_sidebar` refers to the `_data/sidebars/sefsc_sidebar.yml` file. The sidebar data file uses a specific YAML syntax that must be followed. Follow the sample pattern shown in the theme, especially looking at `sefsc_sidebar.yml` as an example.
 
+The side navigation bar in this template points to three different files:
+1. index.html
+2. howto.html
+3. about.html
+
+These html files are automatically generated from the corresponding Markdown files in `_docs/`, which contains the page content, when the website is compiled. The second and third files contain the instructions and technical overview, respectively. Neither are necessary for a documentation page. These files can be repurposed and renamed, if desired, or deleted. Just be sure to update `_data/sidebars/sefsc_sidebar.yml` accordingly.
+
 For more details on the sidebar syntax, see [Sidebar navigation](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_sidebar_navigation.html){:target="_blank" rel="noopener"}.
 
 
