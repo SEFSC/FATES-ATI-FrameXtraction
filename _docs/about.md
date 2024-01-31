@@ -1,6 +1,6 @@
 ---
 title: Creating a Jekyll documentation skeleton template for the Southeast Fisheries Science Center
-summary: Instructions for customizing the theme, creating a skeleton template, and merging the two together
+summary: A technical overview of customizing the theme, creating the skeleton template, and merging the two together
 tags: [getting_started, about, overview]
 toc: false
 search: exclude
@@ -8,7 +8,7 @@ search: exclude
 
 # About this project
 
-This page is for informational purposes only. It captures the process to create the GitHub Pages [SEFSC-FATES-documentation-jekyll-skeleton](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/index.html){:target="_blank" rel="noopener"} repository template for use within the NOAA Fisheries Southeast Fisheries Science Center. Nothing herein needs to be repeated to create a specific documentation page in a GitHub repository. These steps are *only necessary if one desires to create a new **template*** of the same format and functionality – for example, if a different Financial Management Center (FMC) desires to create their own custom template. Instructions for creating an actual documentation page using the theme are provided in [Getting started with SEFSC Jekyll Documentation Theme Skeleton](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/howto.html){:target="_blank" rel="noopener"}.
+This page is for informational purposes only. It's technical. It captures the process to create the GitHub Pages [SEFSC-FATES-documentation-jekyll-skeleton](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/index.html){:target="_blank" rel="noopener"} repository template for use within the NOAA Fisheries Southeast Fisheries Science Center. Nothing herein needs to be repeated to create a specific documentation page in a GitHub repository. These steps are *only necessary if one desires to create a new **template*** of the same format and functionality – for example, if a different Financial Management Center (FMC) desires to create their own custom template. Instructions for creating an actual documentation page using the theme are provided in [Getting started with SEFSC Jekyll Documentation Theme Skeleton](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/howto.html){:target="_blank" rel="noopener"}.
 
 The [NOAA Fisheries](https://www.fisheries.noaa.gov/){:target="_blank" rel="noopener"} [Southeast Fisheries Science Center (SEFSC)](https://www.fisheries.noaa.gov/about/southeast-fisheries-science-center){:target="_blank" rel="noopener"} [Fisheries Assessment, Technology, and Engineering Support (FATES) Division](https://www.fisheries.noaa.gov/about/fisheries-assessment-technology-engineering-support){:target="_blank" rel="noopener"} is actively developing a suite of new, innovative machine learning models designed to increase data processing efficiencies across the Center’s mission portfolio. These projects include, but are not limited to, automating the processing of Gulf and South Atlantic video survey data to derive species counts, automating aging of Gulf and Atlantic menhaden and red snapper, and automating the derivation of fish lengths from stereo video. These models were developed in Python using open-source libraries (e.g., PyTorch, cudatoolkit, Torchvision, and scikit-learn) by partners through the [NOAA Northern Gulf Institute (NGI)](https://www.northerngulfinstitute.org/){:target="_blank" rel="noopener"} and the [Cooperative Institute for Climate, Ocean, and Ecosystem Studies (CICOES)](https://cicoes.uw.edu/){:target="_blank" rel="noopener"} and are or will be maintained on the [SEFSC Organization GitHub account](https://github.com/SEFSC){:target="_blank" rel="noopener"}.
 
@@ -18,11 +18,10 @@ Several features were prioritized when selecting a platform for SEFSC FATES docu
 1. Content version control
 2. Documentation existing alongside the model source code
 3. Minimal learning curve for populating and maintaining content
-4. Layout and formatting customization to align with agency visual branding requirements
+4. Layout and formatting customization to align with agency visual branding requirements  
 
-
-<table style="font-size:small">
-  <caption style="text-align:left"><b>Table 1:</b> A variety of resources have been used across NOAA for documenting procedures or applications, each having its own advantages and disadvantages. In the absence of guidance or directives, users currently select the approach best suited to their needs. This non-exhaustive list provides some examples of documentation solutions.</caption>
+<table style="font-size:small; width:75%; align:center; margin-left:auto; margin-right:auto;">
+  <caption style="text-align:left"><hr><b>Table 1:</b> A variety of resources have been used across NOAA for documenting procedures or applications, each having its own advantages and disadvantages. In the absence of guidance or directives, users currently select the approach best suited to their needs. This non-exhaustive list provides some examples of documentation solutions.</caption>
   <tbody>
     <tr>
       <th style="text-align:center">DOCUMENTATION SOLUTION</th>
@@ -67,7 +66,6 @@ Several features were prioritized when selecting a platform for SEFSC FATES docu
     </tr>
     <tr>
       <td valign="top"><b>GitHub respository Wiki</b> <br><br> Example: NOAA IOOS <a href="https://github.com/ioos/ioosngdac/wiki/DAC-Documentation">National Glider Data Assembly Center (NGDAC) Documentation</a> (<i>archived</i>)</td>
-</td>
       <td valign="top">
         <ul>
           <li>Consistent formatting across all GitHub repositories (repos)</li>
