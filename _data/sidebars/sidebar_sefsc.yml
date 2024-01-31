@@ -51,7 +51,7 @@ entries:
 
 
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
-  - title: "HOWTO - SEFSC FATES Jekyll Theme"
+  - title: "HOWTO - Using the SEFSC FATES Jekyll Theme"
     output: web, pdf
 
     folderitems:
@@ -90,3 +90,59 @@ entries:
       url: /howto.html#references
       output: web
 
+# Always visible folder name that contains top-level menu items with links to 3rd document/page
+  - title: "ABOUT: Creating the SEFSC FATES Jekyll Theme and Template"
+    output: web, pdf
+
+    folderitems:
+
+# A link to the top of the HOWTO page
+    - title: Overview
+      url: /about.html
+      output: web
+
+# A link to the 3rd rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page', e.g. '
+    - title: About This Project
+      url: /about.html#about-this-project
+      output: web
+
+    # - title: Creating the Custom Theme
+    #   url: /about.html#custom-sefsc-theme-for-github-pages-documentation-sites
+    #   output: web
+
+      subfolders:
+
+# A subfolder name that contains sub-level menu items with links to 2nd document/page (note quotes are required for entries with special characters like '#')
+      - title: Creating the Custom Theme
+        output: web
+      
+        subfolderitems:
+
+        - title: Custom SEFSC Theme for GitHub Pages Documentation Sites
+          url: /about.html#custom-sefsc-theme-for-github-pages-documentation-sites
+          output: web
+
+        - title: "Creating the Theme Repo"
+          url: /about.html#creating-and-setting-up-a-custom-documentation-theme-jekyll-repository
+          output: web
+
+        - title: "What This Theme Repo Provides"
+          url: /about.html#what-this-theme-repository-provides
+          output: web
+
+      - title: Creating the Documentation Template
+        output: web
+
+        subfolderitems:
+
+        - title: GitHub Pages Documentation Template
+          url: /about.html#github-pages-documentation-template
+          output: web
+
+        - title: Creating a Documentation Skeleton Repo
+          url: /about.html#creating-a-documentation-skeleton-repository
+          output: web
+
+    - title: Final Remarks 
+      url: /about.html#conclusion
+      output: web
