@@ -74,7 +74,7 @@ entries:
       output: web
 
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
-  - title: "HOWTO - Using the SEFSC FATES Jekyll Theme"
+  - title: "HOWTO - Using the SEFSC Jekyll Theme"
     output: web, pdf
 
     folderitems:
@@ -114,7 +114,7 @@ entries:
       output: web
 
 # Always visible folder name that contains top-level menu items with links to 3rd document/page
-  - title: "ABOUT: Creating the SEFSC FATES Jekyll Theme and Template"
+  - title: "ABOUT: Creating the SEFSC Jekyll Theme and Template"
     output: web, pdf
 
     folderitems:

@@ -5,13 +5,13 @@ tags: [getting_started, about, overview]
 toc: false
 search: exclude
 #permalink: index.html
-summary: Instructions to create a new SEFSC GitHub documentation site based on the "SEFSC-FATES-documentation-jekyll-skeleton" repository.
+summary: Instructions to create a new SEFSC GitHub documentation site based on the "SEFSC-documentation-jekyll-skeleton" repository.
 ---
 
 
 ## Background
 
-The [SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository is a template, or "skeleton", starting point to create a new GitHub-based documentation site that uses the NOAA Fisheries Southeast Fisheries Science Center (SEFSC) Fisheries Assessment, Technology, and Engineering Support (FATES) Division [documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} documentation format and functionality. This documentation theme is derived from the NOAA Integrated Ocean Observing System (IOOS) [documentation-theme-jekyll](https://github.com/ioos/documentation-theme-jekyll){:target="_blank" rel="noopener"} and its upstream parent repositories, which is used for all [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} sites.
+The [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository is a template, or "skeleton", starting point to create a new GitHub-based documentation site that uses the NOAA Fisheries Southeast Fisheries Science Center (SEFSC) [documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} documentation format and functionality. This documentation theme is derived from the NOAA Integrated Ocean Observing System (IOOS) [documentation-theme-jekyll](https://github.com/ioos/documentation-theme-jekyll){:target="_blank" rel="noopener"} and its upstream parent repositories, which is used for all [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} sites.
 
 The instructions below will allow you to create a new GitHub Pages site that follows the look and feel/functionality of the Jekyll documentation theme used by the [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} site. You can then add/edit the template markdown documents with your own content.
 
@@ -19,11 +19,11 @@ The instructions below will allow you to create a new GitHub Pages site that fol
 
 ## Getting Started
 
-### Step 1: Use the SEFSC-FATES-documentation-jekyll-skeleton template to create your own forked repository
+### Step 1: Use the SEFSC-documentation-jekyll-skeleton template to create your own forked repository
 
 This is done on the GitHub website.  These steps assume you already have a GitHub account in place.
 
-1. Browse to the [SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository, select the "Use this template" button, and select "Create a new repository": ![GitHub use template image](https://ioos.github.io/use-template.png){:style="display:block; border: 1px solid"}
+1. Browse to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository, select the "Use this template" button, and select "Create a new repository": ![GitHub use template image](https://ioos.github.io/use-template.png){:style="display:block; border: 1px solid"}
 
 1. Select the repository owner (your own account or a GitHub organization you have write permissions to) and type a name for the repository. If the new repository is for SEFSC-related work, the repository name should adhere to the SEFSC repository naming convention as depicted in the [SEFSC GitHub SOP](https://github.com/SEFSC/SEFSC-Resources/blob/18a6c7e98b3e9b71f5e5912282d9d7f08c0e0a1a/SEFSC%20GitHub%20SOP%20and%20User%20Agreement%20Form/SEFSC%20Github%20SOP%20-%20RR%20-%20LON%20-%20BGM.pdf){:target="_blank" rel="noopener"}. Select other options as appropriate. At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
 
@@ -47,7 +47,7 @@ This approach allows instantaneous rendering of the site exactly as it will appe
 
 **Setting up the Ruby/Jekyll environment:** 
 
-Instructions are avaialable in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"} - this is the upstream Jekyll theme that the SEFSC FATES documentation theme is based on.  
+Instructions are avaialable in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"} - this is the upstream Jekyll theme that the SEFSC documentation theme is based on.  
 
 Follow these steps first to get your Jekyll environment running. In particular, use the [Option 2: Build theme with github-pages gem](https://idratherbewriting.com/documentation-theme-jekyll/index.html#option2){:target="_blank" rel="noopener"} approach to run the site, or read on to the section below.
 
@@ -66,9 +66,9 @@ bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose 
 
 By default, the `bundle exec jekyll serve` command will serve the site on your machine at: 
 
-[http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/](http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"}
+[http://localhost:4000/SEFSC-documentation-jekyll-skeleton/](http://localhost:4000/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"}
 
-Once you have the site running, you will want to modify the settings found in the `_config.yml` and `_config_dev.yml` files to change the site URL from "SEFSC-FATES-documentation-jekyll-skeleton" to a URL of your choosing, and make other modifications as appropriate.  
+Once you have the site running, you will want to modify the settings found in the `_config.yml` and `_config_dev.yml` files to change the site URL from "SEFSC-documentation-jekyll-skeleton" to a URL of your choosing, and make other modifications as appropriate.  
 
 See the [Editing and configuring your documtenation site](#editing-and-configuring-your-documentation-site) section for futher explanation of these and other important theme files to familiarize yourself with and modify as appropriate.
 
@@ -160,7 +160,7 @@ Follow the sample pattern shown in the theme, specifically looking at the Markdo
 
 ### A note on submodules  
 
-This theme uses two GitHub *submodules*. Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC FATES GitHub Documentation sites. <!--[https://sefsc.github.io](https://sefsc.github.io). -->
+This theme uses two GitHub *submodules*. Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC GitHub Documentation sites. <!--[https://sefsc.github.io](https://sefsc.github.io). -->
 For example, the menu bar at the top of the page is configured with a single YAML file in a submodule, and the theme code itself, including site functionality and look and feel, is kept within a second submodule.
 
 The git submodules for this skeleton repository are sourced from the [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository and located in the following submodule paths (as configured in the `.gitmodules` file in the repository root):
@@ -224,7 +224,7 @@ nothing to commit, working directory clean
 ```
 Working with submodules can be tricky; however, the steps above should work in most cases.  For full documentation on the `git submodule` command, see: [https://git-scm.com/docs/git-submodule](https://git-scm.com/docs/git-submodule){:target="_blank" rel="noopener"}.  
 
-There should not be any need to modify code in either of the submodules manually; they are meant to be identical across all of the individual SEFSC FATES GitHub Documentation sites.  They need only to be properly updated in local working copies before submitting any changes back to GitHub.  Both submodules are also automatically synchronized in GitHub with changes in the source [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository via GitHub Actions as configured in the `.github/workflows/sync_theme.yml` file. For the MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton repository, that file can be found [here](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/.github/workflows/sync_theme.yml){:target="_blank" rel="noopener"}.
+There should not be any need to modify code in either of the submodules manually; they are meant to be identical across all of the individual SEFSC GitHub Documentation sites.  They need only to be properly updated in local working copies before submitting any changes back to GitHub.  Both submodules are also automatically synchronized in GitHub with changes in the source [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository via GitHub Actions as configured in the `.github/workflows/sync_theme.yml` file. For the MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton repository, that file can be found [here](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/blob/gh-pages/.github/workflows/sync_theme.yml){:target="_blank" rel="noopener"}.
 
 
 

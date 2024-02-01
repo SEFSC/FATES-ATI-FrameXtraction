@@ -8,13 +8,13 @@ search: exclude
 
 # About this project
 
-This page is for informational purposes only. It's technical. It captures the process to create the GitHub Pages [SEFSC-FATES-documentation-jekyll-skeleton](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/index.html){:target="_blank" rel="noopener"} repository template for use within the NOAA Fisheries Southeast Fisheries Science Center. Nothing herein needs to be repeated to create a specific documentation page in a GitHub repository. These steps are *only necessary if one desires to create a new **template*** of the same format and functionality – for example, if a different Financial Management Center (FMC) desires to create their own custom template. Instructions for creating an actual documentation page using the theme are provided in [Getting started with SEFSC Jekyll Documentation Theme Skeleton](https://mattgrossi-noaa.github.io/SEFSC-FATES-documentation-jekyll-skeleton/howto.html){:target="_blank" rel="noopener"}.
+This page is for informational purposes only. It's technical. It captures the process to create the GitHub Pages [SEFSC-documentation-jekyll-skeleton](https://mattgrossi-noaa.github.io/SEFSC-documentation-jekyll-skeleton/index.html){:target="_blank" rel="noopener"} repository template for use within the NOAA Fisheries Southeast Fisheries Science Center. Nothing herein needs to be repeated to create a specific documentation page in a GitHub repository. These steps are *only necessary if one desires to create a new **template*** of the same format and functionality – for example, if a different Financial Management Center (FMC) desires to create their own custom template. Instructions for creating an actual documentation page using the theme are provided in [Getting started with SEFSC Jekyll Documentation Theme Skeleton](https://mattgrossi-noaa.github.io/SEFSC-documentation-jekyll-skeleton/howto.html){:target="_blank" rel="noopener"}.
 
-The [NOAA Fisheries](https://www.fisheries.noaa.gov/){:target="_blank" rel="noopener"} [Southeast Fisheries Science Center (SEFSC)](https://www.fisheries.noaa.gov/about/southeast-fisheries-science-center){:target="_blank" rel="noopener"} [Fisheries Assessment, Technology, and Engineering Support (FATES) Division](https://www.fisheries.noaa.gov/about/fisheries-assessment-technology-engineering-support){:target="_blank" rel="noopener"} is actively developing a suite of new, innovative machine learning models designed to increase data processing efficiencies across the Center’s mission portfolio. These projects include, but are not limited to, automating the processing of Gulf and South Atlantic video survey data to derive species counts, automating aging of Gulf and Atlantic menhaden and red snapper, and automating the derivation of fish lengths from stereo video. These models were developed in Python using open-source libraries (e.g., PyTorch, cudatoolkit, Torchvision, and scikit-learn) by partners through the [NOAA Northern Gulf Institute (NGI)](https://www.northerngulfinstitute.org/){:target="_blank" rel="noopener"} and the [Cooperative Institute for Climate, Ocean, and Ecosystem Studies (CICOES)](https://cicoes.uw.edu/){:target="_blank" rel="noopener"} and are or will be maintained on the [SEFSC Organization GitHub account](https://github.com/SEFSC){:target="_blank" rel="noopener"}.
+The [NOAA Fisheries](https://www.fisheries.noaa.gov/){:target="_blank" rel="noopener"} [Southeast Fisheries Science Center (SEFSC)](https://www.fisheries.noaa.gov/about/southeast-fisheries-science-center){:target="_blank" rel="noopener"} is actively developing a suite of new, innovative machine learning models designed to increase data processing efficiencies across the Center’s mission portfolio. These projects include, but are not limited to, automating the processing of Gulf and South Atlantic video survey data to derive species counts, automating aging of Gulf and Atlantic menhaden and red snapper, and automating the derivation of fish lengths from stereo video. These models were developed in Python using open-source libraries (e.g., PyTorch, cudatoolkit, Torchvision, and scikit-learn) by partners through the [NOAA Northern Gulf Institute (NGI)](https://www.northerngulfinstitute.org/){:target="_blank" rel="noopener"} and the [Cooperative Institute for Climate, Ocean, and Ecosystem Studies (CICOES)](https://cicoes.uw.edu/){:target="_blank" rel="noopener"} and are or will be maintained on the [SEFSC Organization GitHub account](https://github.com/SEFSC){:target="_blank" rel="noopener"}.
 
 Introducing new computer models into the Center’s data processing procedures necessitates adequate documentation so that the end users will know how to install and execute the models in operational use. Indeed, all computer models and software should be documented by the developers before being released to the intended end user. In the absence of a universally accepted documentation template for use within the SEFSC, NOAA Fisheries, or even NOAA at large, staff across NOAA have established their own approaches and templates of varying degrees of complexity based on their immediate needs. Some examples of these solutions are summarized in Table 1 along with notable strengths and weaknesses of each.
 
-Several features were prioritized when selecting a platform for SEFSC FATES documentation:
+Several features were prioritized when selecting a platform for SEFSC documentation:
 1. Content version control
 2. Documentation existing alongside the model source code
 3. Minimal learning curve for populating and maintaining content
@@ -114,7 +114,7 @@ Google Docs, though straightforward to create and widely used across NOAA, prese
 
 # Custom SEFSC Theme for GitHub Pages Documentation Sites
 
-The decision to use GitHub Pages (gh-pages) for SEFSC FATES documentation was inspired by its widespread use within IOOS. Correspondence with an IOOS data management analyst revealed that all IOOS documentation pages are either already utilizing GitHub Pages (gh-pages) or are in the process of migrating to it because of the strengths listed in Table 1. IOOS hosts a [Documentation Portal](https://ioos.github.io/){:target="_blank" rel="noopener"} within their organizational GitHub account to compile all products and projects documentation in one central location.
+The decision to use GitHub Pages (gh-pages) for SEFSC documentation was inspired by its widespread use within IOOS. Correspondence with an IOOS data management analyst revealed that all IOOS documentation pages are either already utilizing GitHub Pages (gh-pages) or are in the process of migrating to it because of the strengths listed in Table 1. IOOS hosts a [Documentation Portal](https://ioos.github.io/){:target="_blank" rel="noopener"} within their organizational GitHub account to compile all products and projects documentation in one central location.
 
 IOOS maintains consistent formatting, appearance, and functionality across all pages by using a single [Jekyll theme](https://jekyllrb.com/){:target="_blank" rel="noopener"} for all page builds. The selected theme is a [Jekyll Documentation Theme](https://idratherbewriting.com/documentation-theme-jekyll/){:target="_blank" rel="noopener"} forked from the [source repo](https://github.com/tomjoht/documentation-theme-jekyll){:target="_blank" rel="noopener"} and customized by IOOS. Some of the most noticeable modifications include:
 
@@ -125,7 +125,7 @@ IOOS maintains consistent formatting, appearance, and functionality across all p
 
 This theme is simply a GitHub repository containing the necessary configuration files, scripts, and visual branding to provide the underlying structure of a documentation web page. IOOS implements this theme in all documentation pages through the use of [GitHub submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules){:target="_blank" rel="noopener"}, the details of which are beyond the scope of this document but, in short, allow *theme files* to be contained in their own repository and then embedded into a separate repository that contains the *content files* for the web page. There are several advantages to this. First, it means that individuals seeking to write documentation do not need to worry about creating a website. The “guts” already exist. Second, the same theme repository can be embedded into an infinite number of documentation repositories, providing a consistent look and feel across all of them. Finally, the theme can be modified at any time by the owner (for example, the IOOS Program Office) and those changes can easily be propagated through to every other site that uses the theme by simply pulling the changes into each of the respective repositories.
 
-A new “[documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"}” repository was created for SEFSC FATES by forking the IOOS version and adapting the appearance to the Center’s needs. Colors were modified to align with NOAA Fisheries Brand Standards and the IOOS logos were replaced with NOAA Fisheries and Southeast Fisheries Science Center branding. The navigation bar and configuration files were updated as appropriate and mentions or connections to IOOS were edited and redirected to SEFSC. By forking this repository from IOOS (instead of cloning it), it retains its lineage to the original source repo and can therefore easily incorporate future changes made anywhere upstream. In this way, consistency can exist between IOOS and SEFSC documentation pages while the appearances remain tailored to the respective organizations. The sequential steps taken to create this theme repository are described next.
+A new “[documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"}” repository was created for SEFSC by forking the IOOS version and adapting the appearance to the Center’s needs. Colors were modified to align with NOAA Fisheries Brand Standards and the IOOS logos were replaced with NOAA Fisheries and Southeast Fisheries Science Center branding. The navigation bar and configuration files were updated as appropriate and mentions or connections to IOOS were edited and redirected to SEFSC. By forking this repository from IOOS (instead of cloning it), it retains its lineage to the original source repo and can therefore easily incorporate future changes made anywhere upstream. In this way, consistency can exist between IOOS and SEFSC documentation pages while the appearances remain tailored to the respective organizations. The sequential steps taken to create this theme repository are described next.
 
 ## Creating and setting up a custom “documentation-theme-jekyll” repository
 
@@ -307,7 +307,7 @@ The repo just created provides the layout and formatting customization that allo
 
 # GitHub Pages Documentation Template
 
-The next step is to create another repository to serve as a template repo for all documentation pages moving forward. NOAA IOOS again provides a starting point for this, a repo called “[ioos-documentation-jekyll-skeleton](https://github.com/ioos/ioos-documentation-jekyll-skeleton){:target="_blank" rel="noopener"}” that also [demonstrates the web page](https://ioos.github.io/ioos-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} and explains how to use the template. This repo contains one or more Markdown (.md) files that contains the content of the page. The user need only replace the placeholder text with the necessary sections, headers, and narratives. In the case of a model source code already hosted on GitHub, this template can be added to the existing repo as its own branch. As with the theme files, everything in this skeleton repo is fully version controlled. The creation and customization of the IOOS documentation skeleton repo for SEFSC Fates is discussed next. Note that there is more than one way to do this – even shorter methods requiring fewer steps – but the procedure below is what was followed in this particular instance.
+The next step is to create another repository to serve as a template repo for all documentation pages moving forward. NOAA IOOS again provides a starting point for this, a repo called “[ioos-documentation-jekyll-skeleton](https://github.com/ioos/ioos-documentation-jekyll-skeleton){:target="_blank" rel="noopener"}” that also [demonstrates the web page](https://ioos.github.io/ioos-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} and explains how to use the template. This repo contains one or more Markdown (.md) files that contains the content of the page. The user need only replace the placeholder text with the necessary sections, headers, and narratives. In the case of a model source code already hosted on GitHub, this template can be added to the existing repo as its own branch. As with the theme files, everything in this skeleton repo is fully version controlled. The creation and customization of the IOOS documentation skeleton repo for SEFSC is discussed next. Note that there is more than one way to do this – even shorter methods requiring fewer steps – but the procedure below is what was followed in this particular instance.
 
 
 
@@ -374,11 +374,11 @@ This is done on the GitHub website and assumes the user already has a GitHub acc
 
 2. Select an owner for the new repo from the dropdown list, if available. If you belong to a GitHub organization, such as SEFSC, you will have the option of assigning ownership of the repo to the organization or owning it yourself.
 
-3. Rename the repo. If creating the repo in an organizational account, be sure to follow any repo naming conventions of that organization. To adhere to the current SEFSC GitHub Standard Operating Procedure, this new repo for SEFSC FATES has been named “[SEFSC-FATES-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton){:target="_blank" rel="noopener"}” where “ioos” has been replaced by “SEFSC-FATES” and the remainder of the name has been retained. Note that this name could change in the future (*e.g.*, if the template is adapted more broadly across SEFSC, then “-FATES” will be removed.) See screenshot on next page.
+3. Rename the repo. If creating the repo in an organizational account, be sure to follow any repo naming conventions of that organization. To adhere to the current SEFSC GitHub Standard Operating Procedure, this new repo for SEFSC has been named “[SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton){:target="_blank" rel="noopener"}” where “ioos” has been replaced by “SEFSC” and the remainder of the name has been retained. See screenshot on next page.
 
 4. Add a description. The recommendation is to specify what the repo is (in one or two sentences at most) and where it was forked from. For example:
 
-   > A GitHub Pages documentation template for SEFSC FATES based on the ioos-documentation-jekyll-skeleton repo.
+   > A GitHub Pages documentation template for SEFSC based on the ioos-documentation-jekyll-skeleton repo.
 
 5. Click “Create repository”
 
@@ -396,7 +396,7 @@ This is done on the GitHub website and assumes the user already has a GitHub acc
          │   └── ...all theme subdirectories and files
          └── ioos-documentation-jekyll-skeleton/
                └── ...all original template subdirectories and files
-         └── SEFSC-FATES-documentation-jekyll-skeleton/
+         └── SEFSC-documentation-jekyll-skeleton/
                └── ...all new template subdirectories and files
    ```
 
@@ -405,7 +405,7 @@ This is done on the GitHub website and assumes the user already has a GitHub acc
 3. Create a `README.md` file. This can contain anything, but for now, let’s just put the name of the repository:
 
    ```bash
-   echo "# SEFSC-FATES-documentation-jekyll-skeleton" >> README.md
+   echo "# SEFSC-documentation-jekyll-skeleton" >> README.md
    ```
 
 4. Initiate a new Git repository and commit this file to the main branch
@@ -492,11 +492,11 @@ This is where the theme created [above](#custom-sefsc-theme-for-github-pages-doc
         branch = navbars
     ```
 
-4. In the web browser, on the “SEFSC-FATES-documentation-jekyll-skeleton” repo landing page, click the “Settings” tab. Then, from the sidebar, “Actions” → “General”
+4. In the web browser, on the “SEFSC-documentation-jekyll-skeleton” repo landing page, click the “Settings” tab. Then, from the sidebar, “Actions” → “General”
 
 5. Under “Workflow permissions” select “Read and write permissions” to allow GitHub Actions to update the submodules (which is a write action). Click “Save” when done.
 
-The “SEFSC-FATES-documentation-jekyll-skeleton” repo now contains a new directory called `theme @ xxxxxxx`, where *xxxxxxx* is the most most recent commit identifier on the “main” branch of “documentation-theme-jekyll”. Inside this new directory are all of the theme files customized above. Also, in the `_data` directory, there is a new `navbars @ yyyyyyy`, where *yyyyyyy* is the most recent commit identifier on the “navbars” branch of “documentation-theme-jekyll”. In this file is the `topnav` yml file created earlier. More on this later.
+The “SEFSC-documentation-jekyll-skeleton” repo now contains a new directory called `theme @ xxxxxxx`, where *xxxxxxx* is the most most recent commit identifier on the “main” branch of “documentation-theme-jekyll”. Inside this new directory are all of the theme files customized above. Also, in the `_data` directory, there is a new `navbars @ yyyyyyy`, where *yyyyyyy* is the most recent commit identifier on the “navbars” branch of “documentation-theme-jekyll”. In this file is the `topnav` yml file created earlier. More on this later.
 
 ### Step 6: Set up local machine for local editing (optional)
 
@@ -542,7 +542,7 @@ Editing the site locally is often easier than making the changes on GitHub, espe
    bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose --incremental
    ```
 
-   The local site will be available at http://localhost:4000/SEFSC-FATES-documentation-jekyll-skeleton/ once configuration below is completed.
+   The local site will be available at http://localhost:4000/SEFSC-documentation-jekyll-skeleton/ once configuration below is completed.
 
 ### Step 7: Configure the new documentation template repository
 
@@ -552,7 +552,7 @@ We are now ready to customize the new documentation repository and make it into 
 
 2. Change the “baseurl” the `_config_dev.yml` file, which contains settings for local development, to match the name of the new repository. This will make the localhost URL above work. Commit when finished.
 
-3. Update the `_config.yml` file to replace any references to IOOS with SEFSC-FATES, including in commented lines, being sure to change the following elements:
+3. Update the `_config.yml` file to replace any references to IOOS with SEFSC, including in commented lines, being sure to change the following elements:
 
     1. “site_title”
 
@@ -580,27 +580,27 @@ We are now ready to customize the new documentation repository and make it into 
 
 4. Update the `README.md` file. Commit when finished.
 
-    1. Remove any references to IOOS, replacing with SEFSC-FATES
+    1. Remove any references to IOOS, replacing with SEFSC
 
-    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
+    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-documentation-jekyll-skeleton)
 
 5. Update the `_docs/howto.md` file. Commit when finished.
 
-    1. Remove any references to IOOS, replacing with SEFSC-FATES
+    1. Remove any references to IOOS, replacing with SEFSC
 
-    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
+    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-documentation-jekyll-skeleton)
 
 6. Update the `_docs/index.md` file. Commit when finished.
 
-    1. Remove any references to IOOS, replacing with SEFSC-FATES
+    1. Remove any references to IOOS, replacing with SEFSC
 
-    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-FATES-documentation-jekyll-skeleton)
+    2. Update all URLs including all basenames (e.g., https://ioos.github.io → https://sefsc.github.io) and repository names (e.g., ioos-documentation-jekyll-skeleton → SEFSC-documentation-jekyll-skeleton)
 
     3. Add mandatory and/or optional headers and subheaders to be used when creating software or model documentation
 
-7. Push all changes to gh-pages branch. It will take a few minutes for GitHub to build the site, but if everything was done correctly, the new template site should look like the original IOOS template but customized for SEFSC FATES.
+7. Push all changes to gh-pages branch. It will take a few minutes for GitHub to build the site, but if everything was done correctly, the new template site should look like the original IOOS template but customized for SEFSC.
 
-8. Finally, navigate to the SEFSC-FATES-documentation-jekyll-skeleton repo in a web browser. Click “Settings” at the top and select “Template repository” to allow this new repo to be used as a starting point for future projects.
+8. Finally, navigate to the SEFSC-documentation-jekyll-skeleton repo in a web browser. Click “Settings” at the top and select “Template repository” to allow this new repo to be used as a starting point for future projects.
 
 # Conclusion
 

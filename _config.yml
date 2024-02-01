@@ -6,7 +6,7 @@ output: web
 ###############################################################################################################################
 topnav_title: Insert Your Documentation Site Name
 
-site_title: SEFSC FATES GitHub Documentation
+site_title: SEFSC GitHub Documentation
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: NOAA Fisheries Southeast Fisheries Science Center
@@ -137,7 +137,7 @@ description: "A Jekyll-based documentation theme for data management documentati
 
 
 ###############################################################################################################################
-# SEFSC EDIT HERE! Added settings for SEFSC (replace 'sefsc-fates-documentation-jekyll-skeleton' with your GitHub repo name): #
+# SEFSC EDIT HERE! Added settings for SEFSC (replace 'sefsc-documentation-jekyll-skeleton' with your GitHub repo name): #
 ###############################################################################################################################
 # url/baseurl: modify baseurl so that url + baseurl combine to point to the full GitHub repo URL the site will be served from (replace 'your-documentation-repo-name')
 # repository: modify to point to the GitHub repo shorthand name (replace 'your-documentation-repo-name')
@@ -147,15 +147,15 @@ description: "A Jekyll-based documentation theme for data management documentati
 url                      : "https://mattgrossi-noaa.github.io"
 
 #baseurl                  : "/your-documentation-repo-name"
-baseurl                  : "/SEFSC-FATES-documentation-jekyll-skeleton"
+baseurl                  : "/SEFSC-documentation-jekyll-skeleton"
 
 #repository               : "sefsc/your-documentation-repo-name"
-#repository               : "sefsc/SEFSC-FATES-documentation-jekyll-skeleton"
-repository               : "MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton"
+#repository               : "sefsc/SEFSC-documentation-jekyll-skeleton"
+repository               : "MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton"
 
 #github_editme_path       : "sefsc/your-documentation-repo-name/blob/gh-pages/_docs"
-#github_editme_path       : "sefsc/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/_docs"
-github_editme_path       : "MattGrossi-NOAA/SEFSC-FATES-documentation-jekyll-skeleton/blob/gh-pages/_docs"
+#github_editme_path       : "sefsc/SEFSC-documentation-jekyll-skeleton/blob/gh-pages/_docs"
+github_editme_path       : "MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/blob/gh-pages/_docs"
 
 
 # Setup/config for 'sefsc_fates_documentation_theme_jekyll' git submodule (do not alter):
