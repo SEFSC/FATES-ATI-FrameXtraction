@@ -4,7 +4,7 @@ output: web
 ###############################################################################################################################
 # SEFSC EDIT: Replace this field with the documentation site name to appear on the top navigation bar next to the home button #
 ###############################################################################################################################
-topnav_title: FrameXtraction Documentation
+topnav_title: frameXtract Documentation
 
 site_title: Documentation
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
@@ -40,7 +40,7 @@ exclude:
 #################################################################################################################
 # SEFSC EDIT: Replace this field with the documentation site name to be included in feedback email subject line #
 #################################################################################################################
-feedback_subject_line: FrameXtraction Documentation
+feedback_subject_line: frameXtract Documentation
 
 ############################################################################################
 # SEFSC EDIT: Replace this field with the contact email to submit to via the feedback link #
@@ -129,7 +129,7 @@ defaults:
 sidebars:
 - sidebar_sefsc
 
-description: "Documentation and user guide for frameXtraction.py, a simple utility for extracting frames from SEFSC underwater survey videos and writing them to file."
+description: "Documentation and user guide for frameXtract, a simple Python utility for extracting frames from SEFSC underwater survey videos and writing them to file as images."
 # The description is used in the feed.xml file
 
 #disqus_shortname: idrbwjekyll
@@ -158,7 +158,7 @@ repository               : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction"
 github_editme_path       : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
 
 
-# Setup/config for 'sefsc_documentation_theme_jekyll' git submodule (do not alter):
+# Setup/config for 'SEFSC-FATES-ATI-FrameXtraction' git submodule (do not alter):
 source                   : .
 destination              : _site
 plugins_dir              : theme/_plugins

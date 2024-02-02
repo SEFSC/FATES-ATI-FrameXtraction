@@ -1,250 +1,136 @@
 ---
-title: Getting started with SEFSC Jekyll Documentation Theme Skeleton
-keywords: sample homepage
+title: frameXtract Documentation
+summary: Instructions for using the application
 tags: [getting_started, about, overview]
 toc: false
 search: exclude
-#permalink: index.html
-summary: Instructions to create a new SEFSC GitHub documentation site based on the "SEFSC-documentation-jekyll-skeleton" repository.
 ---
 
+# Installation
 
-## Background
+There are two ways of using this script, each with its own dependencies, installation, and usage instructions:
 
-The [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository is a template, or "skeleton", starting point to create a new GitHub-based documentation site that uses the NOAA Fisheries Southeast Fisheries Science Center (SEFSC) [documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} documentation format and functionality. This documentation theme is derived from the NOAA Integrated Ocean Observing System (IOOS) [documentation-theme-jekyll](https://github.com/ioos/documentation-theme-jekyll){:target="_blank" rel="noopener"} and its upstream parent repositories, which is used for all [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} sites.
+### Method 1: Docker container from GitHub (preferred)
 
-The instructions below will allow you to create a new GitHub Pages site that follows the look and feel/functionality of the Jekyll documentation theme used by the [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} site. You can then add/edit the template markdown documents with your own content.
+The preferred method of usage is to run the script within its [Docker container](https://www.docker.com/){:target="_blank" rel="noopener"}, which includes the following components:
+1. **frameXtract.py**: Python script
+2. **requirements.txt**: Python library dependencies
+3. **Dockerfile** and **docker-compose.yml**: Docker container configuration files
 
+#### Dependencies
 
+This method requires a local installation of:
+1. [Docker](https://www.docker.com/){:target="_blank" rel="noopener"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){:target="_blank" rel="noopener"} (recommended)
+2. [GitHub Desktop](https://desktop.github.com/){:target="_blank" rel="noopener"} or [GitHub Command Line Interface (CLI)](https://cli.github.com/){:target="_blank" rel="noopener"}
 
-## Getting Started
+Python package dependencies are not listed here because they are installed automatically within the Docker container, so the user need not worry about them.
 
-### Step 1: Use the SEFSC-documentation-jekyll-skeleton template to create your own forked repository
+#### Setup
 
-This is done on the GitHub website.  These steps assume you already have a GitHub account in place.
+1. Install the dependencies listed above.
+2. [Clone the GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository){:target="_blank" rel="noopener"} **or** download the Docker container files listed above from the repository, either separately or as a .zip package, ensuring that they are all end up co-located in the same local directory.
+   
+   By default, the Python script, the data spreadsheet, and video files are all expected to be in the same directory, and the images will also be written to this same directory. In this case, either download the container files listed above into the same directory as the data and video files, or download the container files into a new directory and then copy or move the data and video files into that directory.
+   
+3. If the data spreadsheet file and video files are in separate directories, and/or if the images are to be written elsewhere, the ```docker-compose.yml``` file needs to be modified as follows:
+      * *Data file*: Under the ```volumes``` heading, replace the "." before the colon (:) for the data directory with the full local directory of the data file. For example, if the data file is on a local Windows desktop, the new entry should read:
+      
+        ```yml
+        volumes:
+          # Application directory
+          - .:/home
+          # Image directory
+          - .:/images
+          # Video directory
+          - .:/videos
+          # Data directory
+          - C:\Users\user.name\Desktop:/data
+        ```
+      
+      * *Video files*: Replace the "." before the colon (:) for the video directory with the full local directory containing the video files. For example, if the video files are on another drive, the new entry might read:
+      
+        ```yml
+        volumes:
+          # Application directory
+          - .:/home
+          # Image directory
+          - .:/images
+          # Video directory
+          - D:\myVideos:/videos
+          # Data directory
+          - C:\Users\user.name\Desktop:/data
+        ```
+      
+      * *Image files*: To change where the images are written locally, replace the "." before the colon (:) for the image directory with the full local directory where the new image files, sorted by fish species, should be written. For example, if the image files are to be written in the local Documents folder, the new entry should read:
 
-1. Browse to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository, select the "Use this template" button, and select "Create a new repository": ![GitHub use template image](https://ioos.github.io/use-template.png){:style="display:block; border: 1px solid"}
+        ```yml
+        volumes:
+          # Application directory
+          - .:/home
+          # Image directory
+          - C:\Users\user.name\Documents\images:/images
+          # Video directory
+          - D:\myVideos:/videos
+          # Data directory
+          - C:\Users\user.name\Desktop:/data
+        ```
+      
+      * *Application file (rare)*: In the unlikely event that the Python script is not co-located with the container files, replace the "." before the colon (:) for the application directory with the full local directory containing the script. This should rarely, if ever, be necessary.
 
-1. Select the repository owner (your own account or a GitHub organization you have write permissions to) and type a name for the repository. If the new repository is for SEFSC-related work, the repository name should adhere to the SEFSC repository naming convention as depicted in the [SEFSC GitHub SOP](https://github.com/SEFSC/SEFSC-Resources/blob/18a6c7e98b3e9b71f5e5912282d9d7f08c0e0a1a/SEFSC%20GitHub%20SOP%20and%20User%20Agreement%20Form/SEFSC%20Github%20SOP%20-%20RR%20-%20LON%20-%20BGM.pdf){:target="_blank" rel="noopener"}. Select other options as appropriate. At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
+    Some things to note:
+    1. Docker is platform-agnostic. Mac OS or Linux directory chains can be used here as well.
+    2. One can set any or all of the images, videos, or data directories. Any combination will work. The leading period (.) means "here" and is used to specify the current directory. Thus, if either the videos or the database annotations file are located in the same directory as the program, the volume mapping should retain the default ".".
+    2. DO NOT change the directory chains *after* the colons. Doing so will break the script.
+    4. This section of ```docker-compose.yml``` maps local directories to independent directories inside the container. The container will only be able to see the contents of local directories mounted here. If you run into "file not found" errors, look here first.
+  
+ 4. Open a Command Prompt (Windows) or Terminal (Mac) and navigate to the directory containing the container files.
+ 5. Launch Docker or Docker Desktop, which must be running in order for the next commands to work.
+ 6. Build the Docker container:
 
-1. From your new repository page, download or "clone" the repository to edit it locally using Jekyll/Ruby.  The local editing process assumes you have a git client installed in order to push your edited files back to GitHub, and that you're able to install the dependencies to run Jekyll (Ruby programming language).  For those who do not have git, or cannot run Ruby, editing can be accomplished on the GitHub website one file at a time (see [Step 2: Edit your documentation site content](#step-2-edit-your-documentation-site-content) below for details).  ![GitHub clone example image](https://ioos.github.io/clone.png){:style="width: 350px; display:block; border: 1px solid"}
+    ```shell
+    docker-compose build
+    ```
 
+#### Usage
 
+To execute, run
 
-### Step 2: Setting up your site for editing
-
-Editing content in your new fork of the documentation skeleton repository can be done in one of two ways:
-1. Locally using a text editor and optionally running in local development mode via a Ruby/Jekyll installation, or
-2. Online using the GitHub website
-
-Editing locally with Ruby/Jekyll is easier for making major changes to the site, including more complex changes to theme content, such as configuring the sidebar navigation, working with images in the `/_docs/images/` folder, etc.  It requires a basic text editor for editing theme content, a local installation of Ruby/Jekyll to preview your changes, and git client to push your changes back to GitHub.  See the [Editing locally with Ruby/Jekyll](#editing-locally-with-rubyjekyll) section for details.
-
-Editing in GitHub is easier for more minor content modifications such as editing text in individual markdowns file, one at a time.  See the [Editing online in GitHub](#editing-online-in-github) section for details.
-
-
-#### Editing locally with Ruby/Jekyll
-This approach allows instantaneous rendering of the site exactly as it will appear in GitHub Pages so you can more rapidly iterate changes.  Once you are happy with your changes, you can then commit them to your git branch locally, and push them with git to GitHub to update the online GitHub Pages site (or follow the GitHub PR workflow, if you prefer).  Using git is outside the scope of this HOWTO, but lots of documentation and tutorial are available onine to learn git.
-
-**Setting up the Ruby/Jekyll environment:** 
-
-Instructions are avaialable in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"} - this is the upstream Jekyll theme that the SEFSC documentation theme is based on.  
-
-Follow these steps first to get your Jekyll environment running. In particular, use the [Option 2: Build theme with github-pages gem](https://idratherbewriting.com/documentation-theme-jekyll/index.html#option2){:target="_blank" rel="noopener"} approach to run the site, or read on to the section below.
-
-**Running the site in Jekyll:**
-
-Some modifications to the theme have been made for the SEFSC's purposes. Therefore, instead of using the exact `bundle` commands included in the Jekyll Documentation Theme instructions to run the site, use the following instead to run Jekyll via Bundler in incremental build and verbose logging mode (using the `_config_dev.yml` for local development settings):
-```
-bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose --incremental
-```
-
-If changing headers and menus, stop the running server by entering `ctrl-c` in the terminal. Then, clean up the locally-built site (in the `_site` directory) and re-run:
-```
-bundle exec jekyll clean
-bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --verbose --incremental
-```
-
-By default, the `bundle exec jekyll serve` command will serve the site on your machine at: 
-
-[http://localhost:4000/SEFSC-documentation-jekyll-skeleton/](http://localhost:4000/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"}
-
-Once you have the site running, you will want to modify the settings found in the `_config.yml` and `_config_dev.yml` files to change the site URL from "SEFSC-documentation-jekyll-skeleton" to a URL of your choosing, and make other modifications as appropriate.  
-
-See the [Editing and configuring your documtenation site](#editing-and-configuring-your-documentation-site) section for futher explanation of these and other important theme files to familiarize yourself with and modify as appropriate.
-
-
-#### Editing online in GitHub
-When you are setting up a new documentation site initially, you will likely want to use the Ruby/Jekyll approach described above to get your site configured.  Once this has been accomplished and your site is running in GitHub Pages, you can make minor edits to your site  directly on GitHub with your browser in three simple steps:
-1. Go to the page you want to edit, and click on the "Edit me" button just below the page Title and Summary;
-2. Open it for editing by clicking on the "pencil" icon at the right side above the file content;
-3. Make all changes, preview them to make sure that everything is okay, and commit them to the "gh-pages" (make sure that the "Commit directly to the gh-pages branch" option is checked).
-
-A visual walkthrough of this process is also available in the [Editing Markdown Files for GitHub Pages](https://docs.google.com/presentation/d/1OBZumh-vK3tynt90_2GH_Xdp1LVuI-wao70FVzGp3Vg/edit#slide=id.p){:target="_blank" rel="noopener"} Google Slides presentation.
-
-
-## Editing and configuring your documentation site
-
-The table below lists important theme configuration files, which will require editing and customization for newly-created sites, and important directories in which to place content for your site.
-
-|**Name**|**Description**|
-|--------|------------|
-|`_config.yml` | Main Jekyll configuration file.  Modify settings here to change anything related to the theme.  The important settings to update are primarily located at the top of the file and include settings like: "title", "name", "description", "baseurl", among others.  More documentation can be found in the "Documentation Theme for Jekyll" original documentation (see below).|
-|`_config_dev.yml` | Settings for running the site locally via Ruby/Jekyll in development mode.  You should only need to modify the `baseurl` setting for your documentation site to align with that of `_config.yml`.|
-|`/_data/sidebars/sidebar_sefsc.yml`| Configuration file for a side accordion navigation menu.  Further description of the configuration details and how they work is beyond the scope here; refer to the Jekyll and the "Documentation Theme for Jekyll" original documentation for more info.|
-|`/_docs/`| Directory to place any GitHub-standard markdown (.md) content to publish.|
-|`/_docs/index.md`| The markdown file that contains the content for the "homepage" (index.html) for the site. This should be updated/replaced accordingly.|
-|`/_docs/images/`| A folder to add any image content to reference in your documentation pages.|
-
-
-### Configuring the side navigation bar
-
-The sidebar navigation adapts to the documentation. Although the theme allows the use of several sidebars (see `_config.yml` file), a single sidebar "sefsc_sidebar" is used by default for the SEFSC implementation. The sidebar name must be specified either in the "defaults" section of `_config.yml` (as it is in this skeleton repo), or it may be configured on a page-by-page basis in the page's frontmatter. Here's an example of the page frontmatter showing the sidebar property:
-
-```
----
-title: Alerts
-tags: [formatting]
-keywords: notes, tips, cautions, warnings, admonitions
-last_updated: July 3, 2016
-summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.html include."
-sidebar: sefsc_sidebar
-permalink: mydoc_alerts
----
+```shell
+docker-compose run framextract -f dataFilename.ext
 ```
 
-The `sidebar: sefsc_sidebar` refers to the `_data/sidebars/sefsc_sidebar.yml` file. The sidebar data file uses a specific YAML syntax that must be followed. Follow the sample pattern shown in the theme, especially looking at `sefsc_sidebar.yml` as an example.
-
-The side navigation bar in this template points to three different files:
-1. index.html
-2. howto.html
-3. about.html
-
-These html files are automatically generated from the corresponding Markdown files in `_docs/`, which contains the page content, when the website is compiled. The second and third files contain the instructions and technical overview, respectively. Neither are necessary for a documentation page. These files can be repurposed and renamed, if desired, or deleted. Just be sure to update `_data/sidebars/sefsc_sidebar.yml` accordingly.
-
-For more details on the sidebar syntax, see [Sidebar navigation](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_sidebar_navigation.html){:target="_blank" rel="noopener"}.
+where ```dataFilename.ext``` is the name of the annotations database file. (Do not pass the full directory chain; just the file name.) Additional options are described below.
 
 
-### Editing markdown documents
+### Method 2: Stand-alone Python script
 
-This theme uses a Kramdown variety of Markdown, a lightweight markup language with a plain text formatting syntax. Kramdown is a superset of Markdown that supports standard Markdown and various extensions. GitHub Pages naturally support rendering documents in Kramdown through GitHub Jekyll implementation. A detailed description of Kramdown syntax can be found by following the links in the Reference section below.
+#### Dependencies
 
-Every document must start with the so-called frontmatter properties:
+**Warning:** This method may be finicky due to potential version conflicts if the virtual environment (VE) does not get set up properly. Proceed at your own risk.
 
-```
----
-title: "Some title"
-tags: [sample1, sample2]
-keywords: keyword1, keyword2, keyword3
-last_updated: Month day, year
-summary: "optional summary here"
-sidebar: sidebarname
-topnav: topnavname
-toc: false
-#search: exclude
-#permalink: filename.html
----
-```
+This method requires local installations of:
+1. Optional [Anaconda](https://www.anaconda.com/){:target="_blank" rel="noopener"} for Python and VE management
+2. [Python](https://www.python.org/downloads/){:target="_blank" rel="noopener"}. frameXtract was written using Python 3.11.
+3. [GitHub Desktop](https://desktop.github.com/){:target="_blank" rel="noopener"} or [GitHub Command Line Interface (CLI)](https://cli.github.com/){:target="_blank" rel="noopener"}
+4. Python package dependencies listed in the accompanying [requirements.txt](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/main/requirements.txt){:target="_blank" rel="noopener"} file. Currently, only two libraries are needed:
+    - [Pandas v2.1.0](https://pandas.pydata.org/docs/whatsnew/v2.1.0.html){:target="_blank" rel="noopener"}
+    - [opencv-python-headless](https://pypi.org/project/opencv-python-headless/){:target="_blank" rel="noopener"}
 
-For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash `\`.
+#### Setup
 
-Values for `keywords` get populated into the metadata of the page for search engine optimization (SEO).
+1. Install the GitHub clients above.
+2. Install Anaconda (optional; includes Python) or Python.
+3. [Clone this GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository){:target="_blank" rel="noopener"}. Alternatively, download the script file ```frameXtract.py``` and the package dpendency file ```requirements.txt``` from the repository.
+4. **Highly recommended:** [Create a virtual environment](https://docs.python.org/3/library/venv.html){:target="_blank" rel="noopener"} and install the package dependencies in ```requirements.txt```.
 
-Values for `tags` must be defined in your `_data/tags.yml` list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won't auto-create these tag files.)
+#### Usage
 
-In the current version of the theme, the `permalink` property value interferes with other collection settings; therefore it should be commented out (using a hash, #) in the frontmatter. However, it should not be removed as it may be needed in future versions.
+Execute by passing a *full directory path* for the data spreadsheet file using ```-f``` or ```--file``` **and** a full directory path for the videos to ```-v``` or ```--video``` **and** (optionally) a full directory path for new images to ```-i``` or ```--image```. Full directories will tell the script that it is being run stand-alone instead of within a container:
 
-The value for `search` controls the inclusion of the document content into the theme search mechanism. If you want to be able to perform basic search through your site documents, make sure that this "exclude" property is commented out in the frontmatter.
+   ```shell
+   python framextract.py --file full/path/to/dataFilename.ext --video full/path/to/videoFiles --image full/path/for/imageFiles
+   ```
 
-Follow the sample pattern shown in the theme, specifically looking at the Markdown sample documents in the `_docs` folder as examples.
-
-
-### A note on submodules  
-
-This theme uses two GitHub *submodules*. Submodules are essentially links to other GitHub repositories that allow certain components of the site to be synchronized more easily across all SEFSC GitHub Documentation sites. <!--[https://sefsc.github.io](https://sefsc.github.io). -->
-For example, the menu bar at the top of the page is configured with a single YAML file in a submodule, and the theme code itself, including site functionality and look and feel, is kept within a second submodule.
-
-The git submodules for this skeleton repository are sourced from the [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository and located in the following submodule paths (as configured in the `.gitmodules` file in the repository root):
-
-|**Submodule Path**|**Branch Name**|**Description**|
-|--------|------------|------------|
-|`/_data/navbars/`| navbars | YAML configuration file for the SEFSC top navigation bar (`topnav_sefsc.yml`) |
-|`/theme/`| main | Jekyll theme files containing the look and feel and functionality of the site |
-
-
-#### Updating submodules in a local development clone
-
-If you're doing local development with git and Jekyll and your local working copy is out of date (some number of commits behind the GitHub-hosted source repository), the workflow to follow to update your local working copy is slightly more complicated due to the presence of the submodules.  
-
-First, follow a typical git process to pull in the remote changes from GitHub.  Assuming `origin` is the git remote repo alias and `gh-pages` is the working branch, run either of the following commands to update your working copy:
-```
-git pull
-```
-or
-```
-git fetch origin
-git merge origin/gh-pages
-```
-
-At this point, running a `git status` command may indicate that your working copy contains commits on the submodules that differ from the remote repo you're working with. This looks something like the following:
-```
-git status
-On branch gh-pages
-Your branch is up-to-date with "origin/gh-pages".
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   _data/navbars (new commits)
-        modified:   theme (new commits)
-```
-
-This means you must also update the submodules to match the commit recorded in the latest commit of the superproject (i.e. the documentation repo itself).  Pull in any upstream changes to submodules by running either of the following (`--init` may be needed in some circumstances):  
-```
-git submodule update --init
-git submodule update
-```
-
-You can confirm the submodules are configured correctly to track the upstream repository branches (and not tagged to a specific commit) by running:
-```
-git submodule status
-```
-
-This should output something like the following, showing the hash of the commit currently checked out, the submodule name, and the remote branch tracked:
-```
-edb2048843b71191909d53428b969f53bfbe4757 _data/navbars (remotes/origin/navbars)
-d958aec9981aacace8c08dc6b2da147afdab9af6 theme (remotes/origin/main)
-```
-
-Additionally, running `git status` again should resolve the modified status of both submodule paths (meaning your working copy is now fully in-sync with the latest remote commit on GitHub) and you can now commit new changes without affecting the submodule commit history:
-```
-git status
-On branch gh-pages
-Your branch is up-to-date with "origin/gh-pages".
-nothing to commit, working directory clean
-```
-Working with submodules can be tricky; however, the steps above should work in most cases.  For full documentation on the `git submodule` command, see: [https://git-scm.com/docs/git-submodule](https://git-scm.com/docs/git-submodule){:target="_blank" rel="noopener"}.  
-
-There should not be any need to modify code in either of the submodules manually; they are meant to be identical across all of the individual SEFSC GitHub Documentation sites.  They need only to be properly updated in local working copies before submitting any changes back to GitHub.  Both submodules are also automatically synchronized in GitHub with changes in the source [MattGrossi-NOAA/documentation-theme-jekyll](https://github.com/MattGrossi-NOAA/documentation-theme-jekyll){:target="_blank" rel="noopener"} repository via GitHub Actions as configured in the `.github/workflows/sync_theme.yml` file. For the MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton repository, that file can be found [here](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/blob/gh-pages/.github/workflows/sync_theme.yml){:target="_blank" rel="noopener"}.
-
-
-
-## References  
-
- - [Original Documentation for the Documentation Theme for Jekyll](http://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"}
-   - [Ruby & Jekyll Installation and Setup Section](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_about_ruby_gems_etc.html){:target="_blank" rel="noopener"}
- - [A Comprehensive Guide for Jekyll](https://jekyllrb.com/docs/){:target="_blank" rel="noopener"}
- - [Ruby documentation & downloads](https://www.ruby-lang.org/en/){:target="_blank" rel="noopener"}
-    - [Ruby Installer for Windows](http://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"}
-    - [A Guide on Ruby Installation and Setup for Windows 10](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-and-set-up-a-local-programming-environment-on-windows-10){:target="_blank" rel="noopener"}
- - [General information on the way GitHub uses Jekyll in "GitHub Pages" sites](https://help.github.com/articles/about-github-pages-and-jekyll/){:target="_blank" rel="noopener"}
-    - [In particular, how to use a specially-named branch "gh-pages" to push documentation for a "Project" page (which most repos will fall under)](https://help.github.com/articles/user-organization-and-project-pages/){:target="_blank" rel="noopener"}
- - GitHub Kramdown:
-    - [Kramdown Syntax](https://kramdown.gettalong.org/syntax.html){:target="_blank" rel="noopener"}
-    - [Kramdown Quick Reference](https://kramdown.gettalong.org/quickref.html){:target="_blank" rel="noopener"}
-
-## FAQ
-
-### The theme isn't rendering properly when deployed to the web.
-If it looks something like:
-![screenshot](https://user-images.githubusercontent.com/8480023/260767152-435696ce-fd9e-4b76-86e5-dc84be85e577.png)
-   * Check that `_config.yml` and `_config_dev.yml` are pointing to the right repository. See this rull request as an example https://github.com/ioos/glider-dac/pull/216/files.
+<p style="text-align:right; font-size:large;">
+    <a href="{{ site.url }}{{ site.baseurl }}/about.html"> <b>Usage</b> &#9654; </a>
+</p>

@@ -8,164 +8,85 @@ entries:
   folders:
 
 # Always visible folder name that contains top-level menu items with links to 1st document/page
-  - title: Read the Docs
+  - title: READ THE DOCS
     output: web, pdf
 
     folderitems:
 
 # A link to the top of the homepage (causes accordion to be open by default)
-    - title: Application Name
+    - title: About
       url: /index.html
       output: web
-
-# Top-level menu item #1
-    - title: About
-
-# A link to the 1st rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page'
-      url: /index.html#about
-      output: web
-
-      subfolders:
-
-# A subfolder name that contains sub-level menu items with links to 2nd document/page (note quotes are required for entries with special characters like '#')
-      - title: Installation
-        output: web
-
-        subfolderitems:
-
-        - title: "Requirements"
-          url: /index.html#requirements
-          output: web
-
-        - title: "Dependencies"
-          url: /index.html#dependencies
-          output: web
-
-        - title: "Installing the application"
-          url: /index.html#installing-the-application
-          output: web
-
-      subfolders:
-
-      - title: User Guide
-        output: web
-
-        subfolderitems:
-
-        - title: "Overview"
-          url: /index.html#overview
-          output: web
-
-        - title: "Usage"
-          url: /index.html#usage
-          output: web
-
-        - title: "Options"
-          url: /index.html#options
-          output: web
 
     - title: Release Notes
       url: /index.html#release-notes
       output: web
 
-# Do not remove this one!
-    - title: "Disclaimer"
+    - title: Disclaimer
       url: /index.html#disclaimer
       output: web
 
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
-  - title: "HOWTO - Using the SEFSC Jekyll Theme"
+  - title: INSTALLATION
+    url: /howto.html
     output: web, pdf
 
     folderitems:
 
-# A link to the top of the HOWTO page
-    - title: Overview
+    - title: "Installation and Setup"
       url: /howto.html
       output: web
-
-# A link to the 2nd rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page', e.g. '
-    - title: Background
-      url: /howto.html#background
+    
+    - title: "Method 1: Docker"
+      url: /howto.html#method-1-docker-container-from-github-preferred
       output: web
 
-    - title: Getting Started
-      url: /howto.html#getting-started
-      output: web
-
-    - title: Local Development With Jekyll
-      url: /howto.html#local-development-with-jekyll
-      output: web
-
-    - title: Configuring Side Navigation Bar 
-      url: /howto.html#configuring-the-side-navigation-bar
-      output: web
-
-    - title: Editing Markdown Documents
-      url: /howto.html#editing-markdown-documents
-      output: web
-
-    - title: Submodules
-      url: /howto.html#a-note-on-submodules
-      output: web
-
-    - title: References
-      url: /howto.html#references
+    - title: "Method 2: Stand-alone"
+      url: /howto.html#method-2-stand-alone-python-script
       output: web
 
 # Always visible folder name that contains top-level menu items with links to 3rd document/page
-  - title: "ABOUT: Creating the SEFSC Jekyll Theme and Template"
+  - title: USER GUIDE
     output: web, pdf
 
     folderitems:
 
-# A link to the top of the HOWTO page
-    - title: Overview
+    - title: "Usage"
       url: /about.html
       output: web
 
-# A link to the 3rd rendered document; consists of '/'+'markdown-document-name'+'.html'[+'#'+'any-header-or-other-anchor-on-the-page', e.g. '
-    - title: About This Project
-      url: /about.html#about-this-project
-      output: web
-
-    # - title: Creating the Custom Theme
-    #   url: /about.html#custom-sefsc-theme-for-github-pages-documentation-sites
-    #   output: web
-
       subfolders:
 
-# A subfolder name that contains sub-level menu items with links to 2nd document/page (note quotes are required for entries with special characters like '#')
-      - title: Creating the Custom Theme
-        output: web
-      
-        subfolderitems:
-
-        - title: Custom SEFSC Theme for GitHub Pages Documentation Sites
-          url: /about.html#custom-sefsc-theme-for-github-pages-documentation-sites
-          output: web
-
-        - title: "Creating the Theme Repo"
-          url: /about.html#creating-and-setting-up-a-custom-documentation-theme-jekyll-repository
-          output: web
-
-        - title: "What This Theme Repo Provides"
-          url: /about.html#what-this-theme-repository-provides
-          output: web
-
-      - title: Creating the Documentation Template
+      - title: Options
         output: web
 
         subfolderitems:
 
-        - title: GitHub Pages Documentation Template
-          url: /about.html#github-pages-documentation-template
+        - title: "f, file: data file"
+          url: /about.html#f-file-data-spreadsheet-file-name
           output: web
 
-        - title: Creating a Documentation Skeleton Repo
-          url: /about.html#creating-a-documentation-skeleton-repository
+        - title: "s, sep: separator"
+          url: /about.html#s-sep-separator
           output: web
 
-    - title: Final Remarks 
-      url: /about.html#conclusion
-      output: web
+        - title: "w, window: window"
+          url: /about.html#w-window-window-for-frame-extraction
+          output: web
+
+        - title: "v, video: video directory"
+          url: /about.html#v-video-video-directory
+          output: web
+        
+        - title: "i, image: image directory"
+          url: /about.html#i-image-image-directory
+          output: web
+        
+        - title: "p, print: print status"
+          url: /about.html#p-print-print-status-dialogues-to-screen
+          output: web
+
+        - title: "h, help: help string"
+          url: /about.html#h-help-help-string
+          output: web
+
