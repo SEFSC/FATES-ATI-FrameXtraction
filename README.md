@@ -132,7 +132,7 @@ docker-compose run framextract -h
 ```
 
 ### -f, --file: data spreadsheet file name
-This is the only required argument when using Method 1 above (preferred). It specifies the data shreadsheet file to consult for extracting frames. It must contain the following columns of information:
+This is the only required argument when using Method 1 above (preferred). It specifies the data spreadsheet file to consult for extracting frames. It must contain the following columns of information:
 - *FilenameLeft* - name of video files corresponding to left stereo channel
 - *FilenameRight* - name of video files corresponding to right stereo channel
 - *FrameLeft* - frame numbers to be extracted from *FilenameLeft*
