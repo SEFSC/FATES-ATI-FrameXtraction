@@ -22,10 +22,6 @@ entries:
       url: /index.html#release-notes
       output: web
 
-    - title: Disclaimer
-      url: /index.html#disclaimer
-      output: web
-
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
   - title: INSTALLATION
     output: web, pdf
@@ -130,5 +126,5 @@ entries:
           output: web
 
         - title: "Disclaimer"
-          url: /demo.html#disclaimer
+          url: /demo.html#conclusion
           output: web
