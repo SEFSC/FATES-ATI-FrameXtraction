@@ -612,16 +612,15 @@ for file in os.listdir(outDir):
 ![jpeg](images/mantaray_img19.jpg)
     
 
-Comparing this to the video above, everything checks out.
+{% include callout.html content="Comparing this to the video above, everything checks out." type="success" %}
 
 # Conclusion
 
 We have seen how **frameXtractor.py** can be used to extract frames from a video and save those to file. Instructions on how to use the utility can be found in the [documentation](https://mattgrossi-noaa.github.io/SEFSC-FATES-ATI-FrameXtraction) or on the main GitHub [repo landing page](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction){:target="_blank" rel="noopener"}. If you encounter any issues or would like to submit feature requests, please consider [opening an issue](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/issues){:target="_blank" rel="noopener"}.
 
-***
+<br>
 
-# Disclaimer
-
-This software and its repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
-
-***
+{{site.data.alerts.important}}
+<b>Disclaimer:</b><br>
+This utility is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
+{{site.data.alerts.end}}
