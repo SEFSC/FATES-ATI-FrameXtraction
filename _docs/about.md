@@ -112,5 +112,5 @@ Displays the help documentation.
 *This program remains under active development. This page will be updated as the script evolves.*
 
 <p style="text-align:right; font-size:large;">
-    <a href="{{ site.url }}{{ site.baseurl }}/blob/main/frameExtractionFromVideo.ipynb"> <b>Demonstration</b> &#9654; </a>
+    <a href="{{ site.url }}{{ site.baseurl }}/frameExtractionFromVideo.html"> <b>Usage</b> &#9654; </a>
 </p>
