@@ -153,9 +153,10 @@ baseurl                  : "/SEFSC-FATES-ATI-FrameXtraction"
 #repository               : "sefsc/SEFSC-FATES-ATI-FrameXtraction"
 repository               : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction"
 
+# Comment this out to remove the "Edit me" button at the top of each page
 #github_editme_path       : "sefsc/your-documentation-repo-name/blob/gh-pages/_docs"
 #github_editme_path       : "sefsc/SEFSC-FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
-github_editme_path       : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
+#github_editme_path       : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
 
 
 # Setup/config for 'SEFSC-FATES-ATI-FrameXtraction' git submodule (do not alter):
