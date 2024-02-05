@@ -28,7 +28,6 @@ entries:
 
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
   - title: INSTALLATION
-    url: /howto.html
     output: web, pdf
 
     folderitems:
@@ -90,3 +89,46 @@ entries:
           url: /about.html#h-help-help-string
           output: web
 
+  - title: DEMONSTRATION
+    output: web
+
+    folderitems:
+
+    - title: Demonstration
+      url: /demo.html
+      output: web
+
+      subfolders:
+      
+      - title: Workflow
+        output: web, pdf
+  
+        subfolderitems:
+
+        - title: "Packages"
+          url: /demo.html#packages
+          output: web
+
+        - title: "Arguments"
+          url: /demo.html#command-line-arguments-and-namespace
+          output: web
+
+        - title: "Load the data"
+          url: /demo.html#load-the-data
+          output: web
+
+        - title: "Frame extraction"
+          url: /demo.html#frame-extraction
+          output: web
+
+        - title: "Verification"
+          url: /demo.html#verification
+          output: web
+
+        - title: "Conclusion"
+          url: /demo.html#conclusion
+          output: web
+
+        - title: "Disclaimer"
+          url: /demo.html#disclaimer
+          output: web
