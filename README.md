@@ -1,5 +1,10 @@
+**This README documentation is no longer maintained. Please refer to the [official documentation page](https://mattgrossi-noaa.github.io/SEFSC-FATES-ATI-FrameXtraction/) for the most up-to-date documentation version.**
+
+---
+
 # imageXtraction
- Simple tool for extracting frames from stereo videos and saving as images as described in [frameExtractionFromVideo.ipynb](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/main/frameExtractionFromVideo.ipynb).
+
+ Simple tool for extracting frames from stereo videos and saving as images as described in [the documentation](https://mattgrossi-noaa.github.io/SEFSC-FATES-ATI-FrameXtraction/) and demonstrated in [frameExtractionFromVideo.ipynb](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/main/frameExtractionFromVideo.ipynb).
 
 <details>
   <summary>
