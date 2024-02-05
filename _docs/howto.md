@@ -78,12 +78,16 @@ Python package dependencies are not listed here because they are installed autom
       
       * *Application file (rare)*: In the unlikely event that the Python script is not co-located with the container files, replace the "." before the colon (:) for the application directory with the full local directory containing the script. This should rarely, if ever, be necessary.
 
-    Some things to note:
-    1. Docker is platform-agnostic. Mac OS or Linux directory chains can be used here as well.
-    2. One can set any or all of the images, videos, or data directories. Any combination will work. The leading period (.) means "here" and is used to specify the current directory. Thus, if either the videos or the database annotations file are located in the same directory as the program, the volume mapping should retain the default ".".
-    2. DO NOT change the directory chains *after* the colons. Doing so will break the script.
-    4. This section of ```docker-compose.yml``` maps local directories to independent directories inside the container. The container will only be able to see the contents of local directories mounted here. If you run into "file not found" errors, look here first.
-  
+    {% include warning.html content="DO NOT change the directory chains *after* the colons. Doing so will break the script." %}
+
+    {{site.data.alerts.note}}
+    <ol type="1">
+    <li>Docker is platform-agnostic. Mac OS or Linux directory chains can be used here as well.</li>
+    <li>One can set any or all of the images, videos, or data directories. Any combination will work. The leading period (.) means "here" and is used to specify the current directory. Thus, if either the videos or the database annotations file are located in the same directory as the program, the volume mapping should retain the default ".".</li>
+    <li>This section of ```docker-compose.yml``` maps local directories to independent directories inside the container. The container will only be able to see the contents of local directories mounted here. If you run into "file not found" errors, look here first.</li>
+    </ol>
+    {{site.data.alerts.end}}
+
  4. Open a Command Prompt (Windows) or Terminal (Mac) and navigate to the directory containing the container files.
  5. Launch Docker or Docker Desktop, which must be running in order for the next commands to work.
  6. Build the Docker container:
@@ -91,6 +95,7 @@ Python package dependencies are not listed here because they are installed autom
     ```shell
     docker-compose build
     ```
+
 
 #### Usage
 
