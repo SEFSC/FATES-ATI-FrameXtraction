@@ -3,6 +3,7 @@ title: frameXtract Documentation
 summary: Instructions for using the application
 tags: [getting_started, about, overview]
 toc: false
+editme: false
 search: exclude
 ---
 
