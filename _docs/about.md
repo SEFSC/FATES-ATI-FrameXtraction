@@ -109,8 +109,13 @@ docker-compose run framextract --file dataFilename.ext --window 5 -p
 
 Displays the help documentation.
 
-*This program remains under active development. This page will be updated as the script evolves.*
+<br>
+{% include note.html content="This program remains under active development. This page will be updated as the script evolves." %}
 
-<p style="text-align:right; font-size:large;">
-    <a href="{{ site.url }}{{ site.baseurl }}/demo.html"> <b>Demonstration</b> &#9654; </a>
+<br>
+<p style="text-align:left; font-size:large;">
+    <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/howto.html">  &#9664; <b>Installation</b> </a>
+   <span style="float:right;">
+        <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/demo.html"> <b>Demonstration</b> &#9654; </a>
+   </span>
 </p>

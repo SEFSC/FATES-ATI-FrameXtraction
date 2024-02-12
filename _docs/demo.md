@@ -624,3 +624,8 @@ We have seen how **frameXtractor.py** can be used to extract frames from a video
 <b>Disclaimer:</b><br>
 This utility is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
 {{site.data.alerts.end}}
+
+<br>
+<p style="text-align:left; font-size:large;">
+    <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/about.html">  &#9664; <b>Usage</b> </a>
+</p>

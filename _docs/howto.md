@@ -137,6 +137,9 @@ Execute by passing a *full directory path* for the data spreadsheet file using `
    python framextract.py --file full/path/to/dataFilename.ext --video full/path/to/videoFiles --image full/path/for/imageFiles
    ```
 
-<p style="text-align:right; font-size:large;">
-    <a href="{{ site.url }}{{ site.baseurl }}/about.html"> <b>Usage</b> &#9654; </a>
+<p style="text-align:left; font-size:large;">
+    <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/index.html">  &#9664; <b>Getting started</b> </a>
+   <span style="float:right;">
+        <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/about.html"> <b>Usage</b> &#9654; </a>
+   </span>
 </p>
