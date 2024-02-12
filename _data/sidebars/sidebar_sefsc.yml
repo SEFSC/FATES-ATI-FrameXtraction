@@ -8,13 +8,13 @@ entries:
   folders:
 
 # Always visible folder name that contains top-level menu items with links to 1st document/page
-  - title: READ THE DOCS
+  - title:  GETTING STARTED
     output: web, pdf
 
     folderitems:
 
 # A link to the top of the homepage (causes accordion to be open by default)
-    - title: Getting Started
+    - title: About
       url: /index.html
       output: web
 
