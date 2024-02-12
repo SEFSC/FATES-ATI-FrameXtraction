@@ -7,9 +7,9 @@ editme: false
 search: exclude
 ---
 
-{% include note.html content="This page is also available as a [static Jupyter Notebook](frameExtractionFromVideo.html)." %}
-
 # Workflow
+
+{% include note.html content="This page is also available as a [static Jupyter Notebook](frameExtractionFromVideo.html)." %}
 
 ## Packages
 

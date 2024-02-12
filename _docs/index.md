@@ -11,7 +11,7 @@ search: exclude
 
 **frameXtract** is a simple tool for extracting frames from stereo videos and saving them as images. Its usage is demonstrated in a [Jupyter notebook](https://github.com/MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/main/frameExtractionFromVideo.ipynb){:target="_blank" rel="noopener"} for informational purposes.
 
-# Overview
+## Overview
 
 **frameXtract** reads a data spreadsheet exported from fish measurement software and extracts the frame number corresponding to each annotation in each stereo video. The database is expected to contain the following columns of information:
 - *FilenameLeft* - name of video files corresponding to left stereo channel
@@ -31,7 +31,7 @@ videoFileName_frame-N_length-L.jpg
 
 where N is the zero-padded frame number extracted from video file ```videoFileName``` and L is the length of the fish in the image. New image files are saved in species-specific subdirectories ```./family/genus/species/```, which are automatically created if they do not already exist. See below for instructions on how to control where these subdirectories are created.
 
-# Release Notes
+## Release Notes
 
 <details>
   <summary>

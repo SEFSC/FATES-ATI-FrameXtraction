@@ -7,18 +7,18 @@ editme: false
 search: exclude
 ---
 
-# Installation
+# Installation and Setup
 
 There are two ways of using this script, each with its own dependencies, installation, and usage instructions:
 
-### Method 1: Docker container from GitHub (preferred)
+## Method 1: Docker container from GitHub (preferred)
 
 The preferred method of usage is to run the script within its [Docker container](https://www.docker.com/){:target="_blank" rel="noopener"}, which includes the following components:
 1. **frameXtract.py**: Python script
 2. **requirements.txt**: Python library dependencies
 3. **Dockerfile** and **docker-compose.yml**: Docker container configuration files
 
-#### Dependencies
+### Dependencies
 
 This method requires a local installation of:
 1. [Docker](https://www.docker.com/){:target="_blank" rel="noopener"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){:target="_blank" rel="noopener"} (recommended)
@@ -26,7 +26,7 @@ This method requires a local installation of:
 
 Python package dependencies are not listed here because they are installed automatically within the Docker container, so the user need not worry about them.
 
-#### Setup
+### Setup
 
 1. Install the dependencies listed above.
 2. [Clone the GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository){:target="_blank" rel="noopener"} **or** download the Docker container files listed above from the repository, either separately or as a .zip package, ensuring that they are all end up co-located in the same local directory.
@@ -97,7 +97,7 @@ Python package dependencies are not listed here because they are installed autom
     ```
 
 
-#### Usage
+### Usage
 
 To execute, run
 
@@ -108,9 +108,9 @@ docker-compose run framextract -f dataFilename.ext
 where ```dataFilename.ext``` is the name of the annotations database file. (Do not pass the full directory chain; just the file name.) Additional options are described below.
 
 
-### Method 2: Stand-alone Python script
+## Method 2: Stand-alone Python script
 
-#### Dependencies
+### Dependencies
 
 {% include warning.html content="This method may be finicky due to potential version conflicts if the virtual environment (VE) does not get set up properly. Proceed at your own risk." %}
 
@@ -122,14 +122,14 @@ This method requires local installations of:
     - [Pandas v2.1.0](https://pandas.pydata.org/docs/whatsnew/v2.1.0.html){:target="_blank" rel="noopener"}
     - [opencv-python-headless](https://pypi.org/project/opencv-python-headless/){:target="_blank" rel="noopener"}
 
-#### Setup
+### Setup
 
 1. Install the GitHub clients above.
 2. Install Anaconda (optional; includes Python) or Python.
 3. [Clone this GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository){:target="_blank" rel="noopener"}. Alternatively, download the script file ```frameXtract.py``` and the package dpendency file ```requirements.txt``` from the repository.
 4. **Highly recommended:** [Create a virtual environment](https://docs.python.org/3/library/venv.html){:target="_blank" rel="noopener"} and install the package dependencies in ```requirements.txt```.
 
-#### Usage
+### Usage
 
 Execute by passing a *full directory path* for the data spreadsheet file using ```-f``` or ```--file``` **and** a full directory path for the videos to ```-v``` or ```--video``` **and** (optionally) a full directory path for new images to ```-i``` or ```--image```. Full directories will tell the script that it is being run stand-alone instead of within a container:
 

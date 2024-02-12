@@ -7,7 +7,7 @@ editme: false
 search: exclude
 ---
 
-# Usage
+## Usage
 
 **frameXtract** is entirely command-line. The syntax for execution differs slightly depending on how the user opts to download, install, and use the script. See [Installation]({{ site.url }}{{ site.baseurl }}/howto.html){:target="_blank" rel="noopener"} instructions for more information.
 
