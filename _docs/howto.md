@@ -84,7 +84,7 @@ Python package dependencies are not listed here because they are installed autom
     <ol type="1">
     <li>Docker is platform-agnostic. Mac OS or Linux directory chains can be used here as well.</li>
     <li>One can set any or all of the images, videos, or data directories. Any combination will work. The leading period (.) means "here" and is used to specify the current directory. Thus, if either the videos or the database annotations file are located in the same directory as the program, the volume mapping should retain the default ".".</li>
-    <li>This section of ```docker-compose.yml``` maps local directories to independent directories inside the container. The container will only be able to see the contents of local directories mounted here. If you run into "file not found" errors, look here first.</li>
+    <li>This section of "docker-compose.yml" maps local directories to independent directories inside the container. The container will only be able to see the contents of local directories mounted here. If you run into "file not found" errors, look here first.</li>
     </ol>
     {{site.data.alerts.end}}
 
