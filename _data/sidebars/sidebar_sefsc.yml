@@ -14,7 +14,7 @@ entries:
     folderitems:
 
 # A link to the top of the homepage (causes accordion to be open by default)
-    - title: About
+    - title: Getting Started
       url: /index.html
       output: web
 
