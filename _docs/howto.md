@@ -112,7 +112,7 @@ where ```dataFilename.ext``` is the name of the annotations database file. (Do n
 
 #### Dependencies
 
-**Warning:** This method may be finicky due to potential version conflicts if the virtual environment (VE) does not get set up properly. Proceed at your own risk.
+{% include warning.html content="This method may be finicky due to potential version conflicts if the virtual environment (VE) does not get set up properly. Proceed at your own risk." %}
 
 This method requires local installations of:
 1. Optional [Anaconda](https://www.anaconda.com/){:target="_blank" rel="noopener"} for Python and VE management
