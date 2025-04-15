@@ -143,22 +143,19 @@ description: "Documentation and user guide for frameXtract, a simple Python util
 # repository: modify to point to the GitHub repo shorthand name (replace 'your-documentation-repo-name')
 # github_editme_path: provide the basepath to the branch containing source files for this site (replace 'your-documentation-repo-name').  'blob/gh-pages/_docs' is standard and should remain as is
 
-#url                      : "https://sefsc.github.io"
-url                      : "https://mattgrossi-noaa.github.io"
+url                      : "https://sefsc.github.io"
 
 #baseurl                  : "/your-documentation-repo-name"
-baseurl                  : "/SEFSC-FATES-ATI-FrameXtraction"
+baseurl                  : "/FATES-ATI-FrameXtraction"
 
-#repository               : "sefsc/your-documentation-repo-name"
-#repository               : "sefsc/SEFSC-FATES-ATI-FrameXtraction"
-repository               : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction"
+#repository               : "SEFSC/your-documentation-repo-name"
+repository               : "sefsc/FATES-ATI-FrameXtraction"
 
-#github_editme_path       : "sefsc/your-documentation-repo-name/blob/gh-pages/_docs"
-#github_editme_path       : "sefsc/SEFSC-FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
-github_editme_path       : "MattGrossi-NOAA/SEFSC-FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
+#github_editme_path       : "SEFSC/your-documentation-repo-name/blob/gh-pages/_docs"
+github_editme_path       : "SEFSC/FATES-ATI-FrameXtraction/blob/gh-pages/_docs"
 
 
-# Setup/config for 'SEFSC-FATES-ATI-FrameXtraction' git submodule (do not alter):
+# Setup/config for 'FATES-ATI-FrameXtraction' git submodule (do not alter):
 source                   : .
 destination              : _site
 plugins_dir              : theme/_plugins

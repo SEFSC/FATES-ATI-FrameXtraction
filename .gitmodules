@@ -1,7 +1,7 @@
 [submodule "_data/navbars_theme"]
 	path = _data/navbars
-	url = https://github.com/MattGrossi-NOAA/documentation-theme-jekyll
+	url = https://github.com/SEFSC/documentation-theme-jekyll
 	branch = navbars
 [submodule "documentation-theme-jekyll"]
 	path = theme
-	url = https://github.com/MattGrossi-NOAA/documentation-theme-jekyll
+	url = https://github.com/SEFSC/documentation-theme-jekyll
