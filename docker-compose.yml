@@ -1,5 +1,3 @@
-version: '3.3'
-
 services:
   framextract:
     build:
@@ -7,12 +5,12 @@ services:
       dockerfile: Dockerfile
     image: framextract:latest
     container_name: framextractor
-    # environment:
-    #   - JUPYTER_ENABLE_LAB=yes
-    # stdin_open: true
-    # tty: true
-    # ports:
-    #   - 8888:8888
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    stdin_open: true
+    tty: true
+    ports:
+      - 8888:8888
     volumes:
       # Application directory
       - .:/home
@@ -22,5 +20,5 @@ services:
       - .:/videos
       # Data directory
       - .:/data
-    entrypoint: python3 frameXtract.py
-    command: python3 frameXtract.py -h
+    # entrypoint: python3 frameXtract.py
+    # command: python3 frameXtract.py -h
